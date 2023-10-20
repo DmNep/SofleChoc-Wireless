@@ -1,5 +1,7 @@
 # Настройки клавиатуры для программиста,  F- ряд для отладки программ находиться в верхнем слое.
 
+![sofle_](https://github.com/DmNep/proXiao/assets/133882902/3c68437a-e7de-4c41-970a-6c5507b5bd12)
+
 # zmk-proXiao
 
 ## Corne
