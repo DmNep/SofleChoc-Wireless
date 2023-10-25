@@ -15,7 +15,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+            bindings = <&kp T>, <&kp `>;
         };
     };
     keymap {
@@ -24,7 +24,7 @@
         default_layer {
 // -------------------------------------------------------------------------------------------------------------
 // | F1 ESC |  F2 |  F3 |  F4  |  F5  |  F6  |                    |  F7  |  F8   |  F9   |  F10 |   F11 | F12   |
-// |  TAB   |  Q  |  W  |  E   |  R   |  T   |                    |  Y   |  U    |  I    |  O   |   P   | TEST  |
+// |  TAB   |  Q  |  W  |  E   |  R   | T(ё) |                    |  Y   |  U    |  I    |  O   |   P   | TEST  |
 // | LOWER  |  A  |  S  |  D   |  F   |  G   |                    |  H   |  J    |  K    |  L   |   ;   | LOWER |
 // | CTRL   |  Z  |  X  |  C   |  V   |  B   |  PSCR  |   |  MUTE |  N   |  M    |  ,    |  .   |   /   | ENTER |
 //                | GUI | ALT  | BSPC | SHFT |  ENTER |   |       | SPACE|  ,    |  .    |      |
