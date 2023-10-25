@@ -42,6 +42,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RBKT>, <&none>;
         };
+        td4: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&kp RBKT>, <&none>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -69,14 +76,14 @@
 // ----------------------------------------------------------------------------------------------------------------
 // | boot  |  F1  |  F2   |  F3   |  F4  |  F5  |                   |      |       |       |      |       | boot  |
 // | `     |   1  |   2   |   3   |   4  |   5  |                   |  7   |  8    |  9    |  <   |   >   |       |
-// |       | PGUP |   <-  |   ->  |  ^   |  %   |                   |  4   |  5    |  6    |  (   |   )   |       |
-// |       | PGDN | Ctl <-| Ctl ->|  v   |  }   |        |  |       |  1   |  2    |  3    |  :   |   \   | ENTER |
-//                | Номе  | End   |      |      |  ENTER |  |       | SPACE|  0    |       |      |
+// |       | PGUP |   <-  |   ->  |  ^   |  %   |                   |  4   |  5    |  6    |  +   |   -   |       |
+// |       | PGDN | Ctl <-| Ctl ->|  v   |  }   |        |  |       |  1   |  2    |  3    |  *   |   /   | ENTER |
+//                | Номе  | End   |      |      |  ENTER |  |       | SPACE|  0    |       |  =   |
             bindings = <
-&bootloader &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &none     &none    &none   &none     &none     &bootloader
-&kp GRAVE   &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N7    &kp N8   &kp N9  &kp LT    &kp GT    &none
-&trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                 &kp N4    &kp N5   &kp N6  &kp LPAR  &kp RPAR  &none
-&trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &trans   &trans &kp N1    &kp N2   &kp N3  &kp COLON &kp BSLH  &kp RET
+&bootloader &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &none     &none    &none   &none       &none        &bootloader
+&kp GRAVE   &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N7    &kp N8   &kp N9  &kp LT      &kp GT       &none
+&trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                 &kp N4    &kp N5   &kp N6  &kp KP_PLUS &kp KP_MINUS &none
+&trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &trans   &trans &kp N1    &kp N2   &kp N3  &kp COLON   &kp BSLH     &kp RET
                     &kp HOME  &kp END     &kp BSPC  &kp RSHFT &kp RET  &trans &kp SPACE &kp N0   &trans  &trans
             >;
 
