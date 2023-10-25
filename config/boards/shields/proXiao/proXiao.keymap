@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &caps_word {
-    continue-list = <RBKT>, <GRAVE>;
+    continue-list = <RBKT>, <GRAVE>, <COMMA>, <DOT>, <FSLH>;
 };
 
 / {
