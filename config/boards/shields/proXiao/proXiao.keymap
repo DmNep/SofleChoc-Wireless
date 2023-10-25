@@ -8,6 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+&caps_word {
+    continue-list = <RBKT>, <GRAVE>;
+};
+
 / {
     behaviors {
         td0: tap_dance_0 {
@@ -38,7 +42,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp M>, <&kp RBKT>, <&none>;
         };
-        
     };
     keymap {
         compatible = "zmk,keymap";
