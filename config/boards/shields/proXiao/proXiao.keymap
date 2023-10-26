@@ -51,8 +51,8 @@
         };
     };
     macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
+        m0_HASH: m0_HASH {
+            label = "m0_HASH";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -87,13 +87,13 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------------
-// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     | &zed_em_kay  |
+// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     | m0_HASH  |
 // |  @   |  ""  |  #    |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <   |  >  |   C_W    |
 // |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +   |  -  |          |
 // |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  |  ENTER   |
 //               | Номе  | End   |      |      | boot |  | boot | SPACE|  0  |  .  |  =   |
             bindings = <
-&kp EXCL    &kp DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &zed_em_kay
+&kp EXCL    &kp DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &m0_HASH
 &kp AT_SIGN &kp N1    &kp HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
 &trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
 &trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
