@@ -116,7 +116,7 @@
 // |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  |  ENTER  |
 //               | Номе  | End   |      |      | boot |  | boot | SPACE|  0  |  .  |  =   |
             bindings = <
-&kp EXCL    &none     &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &none
+&kp EXCL    &m1_DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &none
 &kp AT_SIGN &none     &m0_HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
 &trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
 &trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
