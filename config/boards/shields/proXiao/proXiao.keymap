@@ -61,6 +61,29 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
+        m1_DQT: m1_DQT {
+            label = "m1_DQT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N4>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+        m2_2хDQT: m2_2хDQT {
+            label = "m2_2хDQT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N4>
+                , <&macro_release &kp LEFT_ALT>
+                , <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N4>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
     };
 
     keymap {
@@ -93,8 +116,8 @@
 // |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  |  ENTER   |
 //               | Номе  | End   |      |      | boot |  | boot | SPACE|  0  |  .  |  =   |
             bindings = <
-&kp EXCL    &kp DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &m0_HASH
-&kp AT_SIGN &kp N1    &kp HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
+&kp EXCL    &m1_DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &m0_HASH
+&kp AT_SIGN &m2_2хDQT &m0_HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
 &trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
 &trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
                       &kp HOME  &kp END     &kp BSPC  &kp RSHFT &bootloader &bootloader &kp SPACE &kp N0  &trans  &kp EQUAL
