@@ -115,7 +115,6 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
-    };
         m6_SEMI: m6_SEMI {
             label = "m6_SEMI";
             compatible = "zmk,behavior-macro";
@@ -126,7 +125,6 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
-    };
         m7_COLO: m7_COLO {
             label = "m7_COLO";
             compatible = "zmk,behavior-macro";
@@ -137,7 +135,6 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
-    };
         m8_PRCNT: m8_PRCNT {
             label = "m8_PRCNT";
             compatible = "zmk,behavior-macro";
