@@ -51,14 +51,14 @@
         };
     };
     macros {
-        zed_em_kay: zed_em_kay {
-            label = "ZM_zed_em_kay";
+        m0_HASH: m0_HASH {
+            label = "m0_HASH";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp N3 &kp N5>
+                , <&macro_release &kp LALT>
                 ;
         };
     };
@@ -87,10 +87,10 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------------
-// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     | &zed_em_kay |
-// |  @   |  ""  |  #    |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <   |  >  |  C_W  |
-// |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +   |  -  |       |
-// |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  | ENTER |
+// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     | &m0_HASH |
+// |  @   |  ""  |  #    |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <   |  >  |   C_W    |
+// |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +   |  -  |          |
+// |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  |  ENTER   |
 //               | Номе  | End   |      |      | boot |  | boot | SPACE|  0  |  .  |  =   |
             bindings = <
 &kp EXCL    &kp DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &zed_em_kay
