@@ -101,7 +101,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LEFT_ALT>
-                , <&macro_tap &kp KP_N3 &kp KP_N3>
+                , <&macro_tap &kp KP_N6 &kp KP_N4>
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
@@ -112,6 +112,39 @@
             bindings
                 = <&macro_press &kp LEFT_ALT>
                 , <&macro_tap &kp KP_N2 &kp KP_N5 &kp KP_N2>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+    };
+        m6_SEMI: m6_SEMI {
+            label = "m6_SEMI";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N5 &kp KP_N9>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+    };
+        m7_COLO: m7_COLO {
+            label = "m7_COLO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N5 &kp KP_N8>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+    };
+        m8_PRCNT: m8_PRCNT {
+            label = "m8_PRCNT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N7>
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
@@ -145,9 +178,9 @@
 // |  @   |  ""  |   #   |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <  |  >  |  C_W   |
 // |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +  |  -  |        |
 // |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *  |  /  | ENTER  |
-//               | Номе  | End   |      |      | boot |  | boot | SPACE|  0  |  .  |  =  |
+//               | Номе  | End   |  _   |      | boot |  | boot | SPACE|  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m1_DQT   &m5_No     &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &none
+&m3_EXCL &m1_DQT   &m5_No    &m6_SEMI    &m8_PRCNT &m7_COLO                          &none     &none   &none   &none           &none        &none
 &m4_AT   &m2_2DQT  &m0_HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
 &trans   &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
 &trans   &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
