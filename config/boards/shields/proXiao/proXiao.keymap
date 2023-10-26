@@ -75,16 +75,16 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------------
 // |  !   |  "   |  №    |  ;    |  %   |  :   |                  |      |     |     |      |     |Caps_word|
-// |  @   |  ""  |  ()   |  []   |  ?   |  &   |                  |  7   |  8  |  9  |  <   |  >  |         |
+// |  @   |  ""  |  #    |  []   |  ?   |  &   |                  |  7   |  8  |  9  |  <   |  >  |         |
 // |      | PGUP |  < -  |  ->   |  ^   |  %   |                  |  4   |  5  |  6  |  +   |  -  |         |
 // |      | PGDN | Ctl <-| Ctl ->|  v   |  }   | boot  |  | boot  |  1   |  2  |  3  |  *   |  /  |  ENTER  |
 //               | Номе  | End   |      |      | ENTER |  |       | SPACE|  0  |  .  |  =   |
             bindings = <
-&kp EXCL     &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                              &none     &none    &none   &none           &none        &caps_word
-&kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                              &kp N7    &kp N8   &kp N9  &kp LT          &kp GT       &trans
-&trans    &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                           &kp N4    &kp N5   &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
-&trans    &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &bootloader   &bootloader &kp N1    &kp N2   &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
-                    &kp HOME  &kp END     &kp BSPC  &kp RSHFT &kp RET       &trans      &kp SPACE &kp N0   &trans  &kp EQUAL
+&kp EXCL    &kp DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                           &none     &none    &none   &none           &none        &caps_word
+&kp AT_SIGN &kp N1    &kp NUHS  &kp N3      &kp QMARK &kp AMPS                            &kp N7    &kp N8   &kp N9  &kp LT          &kp GT       &trans
+&trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                           &kp N4    &kp N5   &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
+&trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &bootloader   &bootloader &kp N1    &kp N2   &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
+                      &kp HOME  &kp END     &kp BSPC  &kp RSHFT &kp RET       &trans      &kp SPACE &kp N0   &trans  &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -109,3 +109,4 @@
         };
     };
 };
+   
