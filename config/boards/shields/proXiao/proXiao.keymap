@@ -145,6 +145,26 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
+        m9_AMPS: m9_AMPS {
+            label = "m9_AMPS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N8>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
+        m10_QMARK: m10_QMARK {
+            label = "m10_QMARK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N6 &kp KP_N3>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
     };
 
     keymap {
@@ -172,16 +192,16 @@
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------
 // |  !   |  "   |   №   |  ;    |  %   |  :   |                |      |     |     |     |     |        |
-// |  @   |  ""  |   #   |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <  |  >  |  C_W   |
+// |  @   |  ""  |   #   |  ()   |  ?   |  &   |                |  7   |  8  |  9  |  <  |  >  |  C_W   |
 // |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +  |  -  |        |
-// |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *  |  /  | ENTER  |
-//               | Номе  | End   |  _   |      | boot |  | boot | SPACE|  0  |  .  |  =  |
+// |      | PGDN | Ctl <-| Ctl ->|  v   |  {}  |      |  |      |  1   |  2  |  3  |  *  |  /  | ENTER  |
+//               | Номе  | End   |  _   |  []  | boot |  | boot | SPACE|  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m1_DQT   &m5_No    &m6_SEMI    &m8_PRCNT &m7_COLO                          &none     &none   &none   &none           &none        &none
-&m4_AT   &m2_2DQT  &m0_HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
-&trans   &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
-&trans   &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
-                   &kp HOME  &kp END     &kp BSPC  &kp RSHFT &bootloader &bootloader &kp SPACE &kp N0  &trans  &kp EQUAL
+&m3_EXCL &m1_DQT   &m5_No    &m6_SEMI    &m8_PRCNT  &m7_COLO                          &none     &none   &none   &none           &none        &none
+&m4_AT   &m2_2DQT  &m0_HASH  &kp N3      &m10_QMARK &m9_AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
+&trans   &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP     &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
+&trans   &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN   &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
+                   &kp HOME  &kp END     &kp BSPC   &kp RSHFT &bootloader &bootloader &kp SPACE &kp N0  &trans  &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
