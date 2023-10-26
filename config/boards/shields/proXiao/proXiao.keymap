@@ -74,13 +74,13 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------------
-// |       |  F1  |  F2   |  F3   |  F4  |  F5  |                  |      |     |     |      |     |Caps_word|
-// | `     |  1   |  2    |  3    |  4   |  5   |                  |  7   |  8  |  9  |  <   |  >  |         |
-// |       | PGUP |  < -  |  ->   |  ^   |  %   |                  |  4   |  5  |  6  |  +   |  -  |         |
-// |       | PGDN | Ctl <-| Ctl ->|  v   |  }   | boot  |  | boot  |  1   |  2  |  3  |  *   |  /  |  ENTER  |
-//                | Номе  | End   |      |      | ENTER |  |       | SPACE|  0  |  .  |  =   |
+// |  !   |  "   |  №    |  ;    |  %   |  :   |                  |      |     |     |      |     |Caps_word|
+// |  @   |  ""  |  ()   |  []   |  ?   |  &   |                  |  7   |  8  |  9  |  <   |  >  |         |
+// |      | PGUP |  < -  |  ->   |  ^   |  %   |                  |  4   |  5  |  6  |  +   |  -  |         |
+// |      | PGDN | Ctl <-| Ctl ->|  v   |  }   | boot  |  | boot  |  1   |  2  |  3  |  *   |  /  |  ENTER  |
+//               | Номе  | End   |      |      | ENTER |  |       | SPACE|  0  |  .  |  =   |
             bindings = <
-&none     &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                              &none     &none    &none   &none           &none        &caps_word
+&EXCL     &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                              &none     &none    &none   &none           &none        &caps_word
 &kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                              &kp N7    &kp N8   &kp N9  &kp LT          &kp GT       &trans
 &trans    &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                           &kp N4    &kp N5   &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
 &trans    &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &bootloader   &bootloader &kp N1    &kp N2   &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
