@@ -58,14 +58,14 @@
 // | Esc (F1) |  F2 |  F3 |  F4  |  F5  |  F6  |                    |  F7  |  F8   |  F9   |  F10 |   F11 |  F12  |
 // |   TAB    |  Q  |  W  |  E   |  R   | T(ё) |                    |  Y   |  U    |  I(щ) |  P   |   [   |  Del  |
 // |  LOWER   |  A  |  S  |  D   |  F   |  G   |                    |  H   |  J    |  K    |  L   |   ;   | LOWER |
-// |   CTRL   |  Z  |  X  |  C   |  V   | B(й) |  PSCR  |   |  MUTE |  N   |  M(ъ) |  ,    |  .   |   /   | ENTER |
-//                  | GUI | ALT  | BSPC | SHFT |  ENTER |   |       | SPACE|  ,    |  .    |      |
+// |   CTRL   |  Z  |  X  |  C   |  V   | B(й) |  PSCR  |   | MUTE  |  N   |  M(ъ) |  ,    |  .   |   /   | ENTER |
+//                  | GUI | ALT  | BSPC | SHFT |  ENTER |   | LANG1 | SPACE|  ,    |  .    |      |
             bindings = <
 &mt F1 ESC &kp F2 &kp F3   &kp F4   &kp F5    &kp F6                         &kp F7    &kp F8       &kp F9     &kp F10  &kp F11  &kp F12
 &kp TAB    &kp Q  &kp W    &kp E    &kp R     &td0                           &kp Y     &kp U        &td2       &kp P    &kp LBKT &none
 &mo 1      &kp A  &kp S    &kp D    &kp F     &kp G                          &kp H     &kp J        &kp K      &kp L    &kp SEMI &mo 1
 &kp LCTRL  &kp Z  &kp X    &kp C    &kp V     &td1      &kp PSCRN &kp C_MUTE &kp N     &td3         &kp COMMA  &kp DOT  &kp FSLH &kp RET
-                  &kp LGUI &kp LALT &kp BSPC  &kp RSHFT &kp RET   &none      &kp SPACE &kp KP_COMMA &kp KP_DOT &none
+                  &kp LGUI &kp LALT &kp BSPC  &kp RSHFT &kp RET   &LANG1     &kp SPACE &kp KP_COMMA &kp KP_DOT &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -74,14 +74,14 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------------
-// |  !   |  "   |  №    |  ;    |  %   |  :   |                  |      |     |     |      |     | C_W (boot) |
-// |  @   |  ""  |  #    |  []   |  ?   |  &   |                  |  7   |  8  |  9  |  <   |  >  |            |
-// |      | PGUP |  < -  |  ->   |  ^   |  %   |                  |  4   |  5  |  6  |  +   |  -  |            |
-// |      | PGDN | Ctl <-| Ctl ->|  v   |  }   | boot  |  |       |  1   |  2  |  3  |  *   |  /  |   ENTER    |
-//               | Номе  | End   |      |      | ENTER |  |       | SPACE|  0  |  .  |  =   |
+// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     |       |
+// |  @   |  ""  |  #    |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <   |  >  |  C_W  |
+// |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +   |  -  |       |
+// |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  | ENTER |
+//               | Номе  | End   |      |      | boot |  | boot | SPACE|  0  |  .  |  =   |
             bindings = <
 &kp EXCL    &kp DQT   &kp NUHS  &kp SEMI    &kp PRCNT &kp COLON                         &none     &none   &none   &none           &none        &none
-&kp AT_SIGN &kp N1    &kp NUHS  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
+&kp AT_SIGN &kp N1    &kp HASH  &kp N3      &kp QMARK &kp AMPS                          &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
 &trans      &kp PG_UP &kp LEFT  &kp RIGHT   &kp UP    &kp PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
 &trans      &kp PG_DN &kp MINUS &kp KP_PLUS &kp DOWN  &kp RBRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
                       &kp HOME  &kp END     &kp BSPC  &kp RSHFT &bootloader &bootloader &kp SPACE &kp N0  &trans  &kp EQUAL
