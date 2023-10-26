@@ -51,8 +51,8 @@
         };
     };
     macros {
-        m0_HASH: m0_HASH {
-            label = "m0_HASH";
+        zed_em_kay: zed_em_kay {
+            label = "ZM_zed_em_kay";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -87,7 +87,7 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------------
-// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     | &m0_HASH |
+// |  !   |  "   |  №    |  ;    |  %   |  :   |                |      |     |     |      |     | &zed_em_kay  |
 // |  @   |  ""  |  #    |  []   |  ?   |  &   |                |  7   |  8  |  9  |  <   |  >  |   C_W    |
 // |      | PGUP |  < -  |  ->   |  ^   |  %   |                |  4   |  5  |  6  |  +   |  -  |          |
 // |      | PGDN | Ctl <-| Ctl ->|  v   |  }   |      |  |      |  1   |  2  |  3  |  *   |  /  |  ENTER   |
