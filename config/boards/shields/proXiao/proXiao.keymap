@@ -261,24 +261,57 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+         m19_COMMA: m19_COMMA {
+            label = "m19_COMMA";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N4 &kp KP_N4>
+                , <&macro_release &kp LEFT_ALT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+         m20_DOT: m20_DOT {
+            label = "m20_DOT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N4 &kp KP_N6>
+                , <&macro_release &kp LEFT_ALT>
+                , <&macro_tap &kp SPACE>
+                // Добавить Ohe Shot Shith
+                ;
+        };
+         m21_DOTn: m21_DOTn {
+            label = "m21_DOTn";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp KP_N4 &kp KP_N6>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
-// --------------------------------------------------------------------------------------------------------------
-// | Esc (F1) |  F2 |  F3 |  F4  |  F5  |  F6  |                  |  F7   |  F8   |  F9   |  F10 |  F11 |  F12  |
-// |   TAB    |  Q  |  W  |  E   |  R   | T(ё) |                  |   Y   |  U    |  I(щ) |  P   |  [   |  Del  |
-// |  LOWER   |  A  |  S  |  D   |  F   |  G   |                  |   H   |  J    |  K    |  L   |  ;   | LOWER |
-// |   CTRL   |  Z  |  X  |  C   |  V   | B(й) | PSCR  |  | MUTE  |   N   |  M(ъ) |  ,    |  .   |  /   | ENTER |
-//                  | GUI | ALT  | BSPC | SHFT | ENTER |  |  RU   | SPACE |  ,    |  .    |      |
+// ------------------------------------------------------------------------------------------------------------
+// | Esc(F1) |  F2 |  F3 |  F4  |  F5  |  F6  |                  |   F7  |  F8  |  F9   |  F10 |  F11 |  F12  |
+// |   TAB   |  Q  |  W  |  E   |  R   | T(ё) |                  |   Y   |  U   |  I(щ) |  P   |  [   |  Del  |
+// |  LOWER  |  A  |  S  |  D   |  F   |  G   |                  |   H   |  J   |  K    |  L   |  ;   | LOWER |
+// |   CTRL  |  Z  |  X  |  C   |  V   | B(й) | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /   | ENTER |
+//                 | GUI | ALT  | BSPC | SHFT | ENTER |  |  RU   | SPACE |  ,   |  .    |      |
             bindings = <
-&mt F1 ESC &kp F2 &kp F3   &kp F4   &kp F5    &kp F6                         &kp F7    &kp F8       &kp F9     &kp F10  &kp F11  &kp F12
-&kp TAB    &kp Q  &kp W    &kp E    &kp R     &td0                           &kp Y     &kp U        &td2       &kp P    &kp LBKT &kp DEL
-&mo 1      &kp A  &kp S    &kp D    &kp F     &kp G                          &kp H     &kp J        &kp K      &kp L    &kp SEMI &mo 1
-&kp LCTRL  &kp Z  &kp X    &kp C    &kp V     &td1      &kp PSCRN &kp C_MUTE &kp N     &td3         &kp COMMA  &kp DOT  &kp FSLH &kp RET
-                  &kp LGUI &kp LALT &kp BSPC  &kp LSHFT &kp RET   &m17_RU    &kp SPACE &kp KP_COMMA &kp KP_DOT &none
+&mt F1 ESC &kp F2 &kp F3   &kp F4   &kp F5    &kp F6                         &kp F7    &kp F8     &kp F9    &kp F10  &kp F11  &kp F12
+&kp TAB    &kp Q  &kp W    &kp E    &kp R     &td0                           &kp Y     &kp U      &td2      &kp P    &kp LBKT &kp DEL
+&mo 1      &kp A  &kp S    &kp D    &kp F     &kp G                          &kp H     &kp J      &kp K     &kp L    &kp SEMI &mo 1
+&kp LCTRL  &kp Z  &kp X    &kp C    &kp V     &td1      &kp PSCRN &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT  &kp FSLH &kp RET
+                  &kp LGUI &kp LALT &kp BSPC  &kp LSHFT &kp RET   &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -286,18 +319,18 @@
 
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
-// ------------------------------------------------------------------------------------------------------
-// |  !   |  "   |   №   |  ;    |  %   |  :   |                |       |     |     |     |     |       |
-// |  @   |  ""  |   #   |  ()   |  ?   |  &   |                |   7   |  8  |  9  |  <  |  >  |  C_W  |
-// |      | PGUP |  < -  |  ->   |  ^   |  %   |                |   4   |  5  |  6  |  +  |  -  |       |
-// |      | PGDN | Ctl <-| Ctl ->|  v   |  {}  |      |  |      |   1   |  2  |  3  |  *  |  /  | ENTER |
-//               | Номе  | End   |  _   |  []  | boot |  | boot | SPACE |  0  |  .  |  =  |
+// ----------------------------------------------------------------------------------------------------
+// |  !  |   "  |   №   |  ;    |  %  |  :   |                |       |     |     |     |     |       |
+// |  @  |  ""  |   #   |  ()   |  ?  |  &   |                |   7   |  8  |  9  |  <  |  >  |  C_W  |
+// |     | PGUP |  < -  |  ->   |  ^  |  %   |                |   4   |  5  |  6  |  +  |  -  |       |
+// |     | PGDN | Ctl<- | Ctl-> |  v  |  {}  |      |  |      |   1   |  2  |  3  |  *  |  /  | ENTER |
+//              | Номе  |  End  |  _  |  []  | boot |  | boot | SPACE |  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &none     &none   &none   &none           &none        &none
-&m4_AT   &m2_2DQT  &m0_HASH   &m11_2PAR   &m10_QMARK &m9_AMPS                           &kp N7    &kp N8  &kp N9  &kp LT          &kp GT       &caps_word
-&trans   &kp PG_UP &m15_ClLFT &m16_ClRIGT &kp UP     &m12_PRCNT                         &kp N4    &kp N5  &kp N6  &kp KP_PLUS     &kp KP_MINUS &trans
-&trans   &kp PG_DN &kp LEFT   &kp RIGHT   &kp DOWN   &m14_2BRC  &none       &none       &kp N1    &kp N2  &kp N3  &kp KP_MULTIPLY &kp BSLH     &kp RET
-                   &kp HOME   &kp END     &m13_2BKT  &m13_2BKT  &bootloader &bootloader &kp SPACE &kp N0  &trans  &kp EQUAL
+&m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &none     &none   &none     &none           &none        &none
+&m4_AT   &m2_2DQT  &m0_HASH   &m11_2PAR   &m10_QMARK &m9_AMPS                           &kp N7    &kp N8  &kp N9    &kp LT          &kp GT       &caps_word
+&trans   &kp PG_UP &m15_ClLFT &m16_ClRIGT &kp UP     &m12_PRCNT                         &kp N4    &kp N5  &kp N6    &kp KP_PLUS     &kp KP_MINUS &trans
+&trans   &kp PG_DN &kp LEFT   &kp RIGHT   &kp DOWN   &m14_2BRC  &none       &none       &kp N1    &kp N2  &kp N3    &kp KP_MULTIPLY &kp BSLH     &kp RET
+                   &kp HOME   &kp END     &m13_2BKT  &m13_2BKT  &bootloader &bootloader &kp SPACE &kp N0  &m21_DOTn &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
