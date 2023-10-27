@@ -324,7 +324,7 @@
 // |   CTRL  |  Z  |  X  |   C   |  V   |  B(й)   | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /  | ENTER |
 //                 | GUI |  ALT  | BSPC |  SHFT   | ENTER |  |  RU   | SPACE |  ,   |  .    |      |
             bindings = <
-&mt F1 ESC &kp F2 &kp F3   &mt F1 F5 &kp F5   &mt F12 F11                    &kp F9    &kp F11    &kp F12   &kp F10 &none    &kp DEL
+&mt F1 ESC &kp F2 &kp F3   &mt F9 F5 &kp F5   &mt F12 F11                    &kp F9    &kp F11    &kp F12   &kp F10 &none    &kp DEL
 &kp TAB    &kp Q  &kp W    &kp E     &kp R    &td0                           &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
 &mo 1      &kp A  &kp S    &kp D     &kp F    &kp G                          &kp H     &kp J      &kp K     &kp L   &kp SEMI &mo 1
 &kp LCTRL  &kp Z  &kp X    &kp C     &kp V    &td1      &kp PSCRN &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT &kp FSLH &kp RET
