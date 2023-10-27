@@ -54,7 +54,7 @@
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk LALT>, <m22_AltF4>, <&none>;
+            bindings = <&sk LALT>, <&m22_AltF4>, <&none>;
         };
     };
     macros {
@@ -317,12 +317,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | Esc(F1) |  F2 |  F3 |  F4  |  F5  |  F7  |                  |   F9  |  F10 |  F11  |  F12 |     |  Del  |
-// |   TAB   |  Q  |  W  |  E   |  R   | T(ё) |                  |   Y   |  U   |  I(щ) |  P   |  [  |       |
-// |  LOWER  |  A  |  S  |  D   |  F   |  G   |                  |   H   |  J   |  K    |  L   |  ;  | LOWER |
-// |   CTRL  |  Z  |  X  |  C   |  V   | B(й) | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /  | ENTER |
-//                 | GUI | ALT  | BSPC | SHFT | ENTER |  |  RU   | SPACE |  ,   |  .    |      |
+// ----------------------------------------------------------------------------------------------------------
+// | Esc(F1) |  F2 |  F3 |  F5 |  F10 | F11  |                  |   F9  |  F10 |  F11  |  F12 |     |  Del  |
+// |   TAB   |  Q  |  W  |  E  |  R   | T(ё) |                  |   Y   |  U   |  I(щ) |  P   |  [  |       |
+// |  LOWER  |  A  |  S  |  D  |  F   |  G   |                  |   H   |  J   |  K    |  L   |  ;  | LOWER |
+// |   CTRL  |  Z  |  X  |  C  |  V   | B(й) | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /  | ENTER |
+//                 | GUI | ALT | BSPC | SHFT | ENTER |  |  RU   | SPACE |  ,   |  .    |      |
             bindings = <
 &mt F1 ESC &kp F2 &kp F3   &kp F4 &kp F5   &kp F7                         &kp F9    &kp F11    &kp F12   &kp F10 &none    &kp DEL
 &kp TAB    &kp Q  &kp W    &kp E  &kp R    &td0                           &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
