@@ -49,6 +49,13 @@
             tapping-term-ms = <200>;
             bindings = <&sk LSHIFT>, <&kp RBKT>, <&none>;
         };
+        td5: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LALT>, <m22_AltF4>, <&none>;
+        };
     };
     macros {
         m0_HASH: m0_HASH {
@@ -294,6 +301,16 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
+         m22_AltF4: m22_AltF4 {
+            label = "m22_AltF4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_ALT>
+                , <&macro_tap &kp F4>
+                , <&macro_release &kp LEFT_ALT>
+                ;
+        };
    };
 
     keymap {
@@ -307,11 +324,11 @@
 // |   CTRL  |  Z  |  X  |  C   |  V   | B(й) | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /  | ENTER |
 //                 | GUI | ALT  | BSPC | SHFT | ENTER |  |  RU   | SPACE |  ,   |  .    |      |
             bindings = <
-&mt F1 ESC &kp F2 &kp F3   &kp F4   &kp F5   &kp F7                         &kp F9    &kp F11    &kp F12   &kp F10 &none    &kp DEL
-&kp TAB    &kp Q  &kp W    &kp E    &kp R    &td0                           &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
-&mo 1      &kp A  &kp S    &kp D    &kp F    &kp G                          &kp H     &kp J      &kp K     &kp L   &kp SEMI &mo 1
-&kp LCTRL  &kp Z  &kp X    &kp C    &kp V    &td1      &kp PSCRN &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT &kp FSLH &kp RET
-                  &kp LGUI &kp LALT &kp BSPC &kp LSHFT &kp RET   &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
+&mt F1 ESC &kp F2 &kp F3   &kp F4 &kp F5   &kp F7                         &kp F9    &kp F11    &kp F12   &kp F10 &none    &kp DEL
+&kp TAB    &kp Q  &kp W    &kp E  &kp R    &td0                           &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
+&mo 1      &kp A  &kp S    &kp D  &kp F    &kp G                          &kp H     &kp J      &kp K     &kp L   &kp SEMI &mo 1
+&kp LCTRL  &kp Z  &kp X    &kp C  &kp V    &td1      &kp PSCRN &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT &kp FSLH &kp RET
+                  &kp LGUI &td5   &kp BSPC &kp LSHFT &kp RET   &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
