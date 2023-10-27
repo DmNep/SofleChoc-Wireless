@@ -317,7 +317,7 @@
         compatible = "zmk,combos";
         combo_EN {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <56 57>;
             bindings = <&m18_EN>;
         };
     };
