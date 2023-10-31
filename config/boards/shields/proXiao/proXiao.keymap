@@ -370,7 +370,7 @@
 // |     |     |     |     |     |     |               |     |     |     |     |     |     |
 //             |     |     |     |     |     |  |      |     |     |     |     |
             bindings = <
-&tog 0 &none &none &none &none &none                    &none &none &none &none &none &none
+&tog 2 &none &none &none &none &none                    &none &none &none &none &none &none
 &none  &none &none &none &none &none                    &none &none &kp A &none &none &none
 &none  &none &none &none &none &none                    &none &none &none &none &none &none
 &none  &none &none &none &none &none &none &none  &none &none &none &none &none &none &none
