@@ -326,23 +326,18 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// ---------------------------------------------------------------------------------------------------------------
-// | Esc(F1) | F2  | F3  | F5(F9)|  F10 | F11(F12)|                  |  PSCR | Ins  |       |      |     |  Del  |
-// |   TAB   |  Q  |  W  |   E   |  R   |  T(ё)   |                  |   Y   |  U   |  I(щ) |  P   |  [  |       |
-// |  LOWER  |  A  |  S  |   D   |  F   |   G     |                  |   H   |  J   |  K    |  L   |  ;  | LOWER |
-// |   CTRL  |  Z  |  X  |   C   |  V   |  B(й)   |       |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /  | ENTER |
-//                 | GUI |  ALT  | BSPC | ^ SHFT  | ENTER |  |  RU   | SPACE |  ,_  |  ._^  |      |
+// -----------------------------------------------------------------------------------------------------------------
+// | Esc(F1) | F2(F12)| F3  | F5(F9)|  F10 |  F11   |                  |  PSCR | Ins  |       |      |     |  Del  |
+// |   TAB   |   Q    |  W  |   E   |  R   |  T(ё)  |                  |   Y   |  U   |  I(щ) |  P   |  [  |       |
+// |  LOWER  |   A    |  S  |   D   |  F   |   G    |                  |   H   |  J   |  K    |  L   |  ;  | LOWER |
+// |   CTRL  |   Z    |  X  |   C   |  V   |  B(й)  |       |  | MUTE  |   N   | M(ъ) |  ,    |  .   |  /  | ENTER |
+//                    | GUI |  ALT  | BSPC | ^ SHFT | ENTER |  |  RU   | SPACE |  ,_  |  ._^  |      |
             bindings = <
-<<<<<<< HEAD
-&mt F1 ESC &kp F2 &kp F3   &mt F9 F5 &kp F5   &kp F11                      &kp PSCRN &kp INS    &none     &none   &none    &kp DEL
-&kp TAB    &kp Q  &kp W    &kp E     &kp R    &kp T                         &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
-=======
-&mt F1 ESC &kp F2 &kp F3   &mt F9 F5 &kp F5   &mt F12 F11                  &kp PSCRN &kp INS    &none     &none   &none    &kp DEL
-&kp TAB    &kp Q  &kp W    &kp E     &kp R    &td0                         &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
->>>>>>> parent of 915d77d (Update proXiao.keymap)
-&mo 1      &kp A  &kp S    &kp D     &kp F    &kp G                        &kp H     &kp J      &kp K     &kp L   &kp SEMI &mo 1
-&kp LCTRL  &kp Z  &kp X    &kp C     &kp V    &td1      &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT &kp FSLH &kp RET
-                  &kp LGUI &td5      &kp BSPC &kp LSHFT &kp RET &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
+&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                      &kp PSCRN &kp INS    &none     &none   &none    &kp DEL
+&kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                         &kp Y     &kp U      &td2      &kp P   &kp LBKT &none
+&mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                        &kp H     &kp J      &kp K     &kp L   &kp SEMI &mo 1
+&kp LCTRL  &kp Z      &kp X    &kp C     &kp V    &td1      &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT &kp FSLH &kp RET
+                      &kp LGUI &td5      &kp BSPC &kp LSHFT &kp RET &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
