@@ -56,6 +56,13 @@
             tapping-term-ms = <200>;
             bindings = <&sk LALT>, <&m22_AltF4>, <&none>;
         };
+        td6: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_6";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_MINUS>, <&kp UNDER>, <&none>;
+        };
     };
     macros {
         m0_HASH: m0_HASH {
@@ -387,10 +394,10 @@
 // |   CTRL  |   Z    |  X  |   C   |  V   |  B(й)  |       |  | MUTE  |   N   | M(ъ) |  ,    |   .   |   /    | ENTER |
 //                    | GUI |  ALT  | BSPC | ^ SHFT | ENTER |  |  RU   | SPACE |  ,_  |  ._^  |       |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                              &kp PSCRN &kp INS    &tog 2    &m23_CMNT &m24_UNCMNT &kp DEL
-&kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                                 &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
-&mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                                &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
-&kp LCTRL  &kp Z      &kp X    &kp C     &kp V    &td1              &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
+&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                       &kp PSCRN &kp INS    &tog 2    &m23_CMNT &m24_UNCMNT &kp DEL
+&kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                          &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
+&mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                         &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
+&kp LCTRL  &kp Z      &kp X    &kp C     &kp V    &td1       &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
                       &kp LGUI &td5      &kp BSPC &mt LSHFT  &kp RET &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
             >;
 
@@ -399,18 +406,18 @@
 
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
-// ----------------------------------------------------------------------------------------------------
-// |  !  |   "  |   №   |  ;    |  %  |  :   |                |       |     |     |     |     |       |
-// |  @  |  ""  |   #   |  ()   |  ?  |  &   |                |   7   |  8  |  9  |  <  |  >  |  C_W  |
-// |     | PGUP |  < -  |  ->   |  ^  |  %   |                |   4   |  5  |  6  |  +  |  -  |       |
-// |     | PGDN | Ctl<- | Ctl-> |  v  |  {}  |      |  |      |   1   |  2  |  3  |  *  |  /  | ENTER |
-//              | Номе  |  End  |  _  |  []  | boot |  | boot | SPACE |  0  |  .  |  =  |
+// -----------------------------------------------------------------------------------------------------
+// |  !  |   "  |   №   |  ;    |  %  |  :   |                 |       |     |     |     |     |       |
+// |  @  |  ""  |   #   |  ()   |  ?  |  &   |                 |   7   |  8  |  9  |  <  |  >  |  C_W  |
+// |     | PGUP |  < -  |  ->   |  ^  |  %   |                 |   4   |  5  |  6  |  +  |  -  |       |
+// |     | PGDN | Ctl<- | Ctl-> |  v  |  {}  | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | ENTER |
+//              | Номе  |  End  | BSPC|  []  | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &none     &none   &none     &none           &none        &none
-&m4_AT   &m2_2DQT  &m0_HASH   &m11_2PAR   &m10_QMARK &m9_AMPS                           &kp N7    &kp N8  &kp N9    &kp LT          &kp GT       &caps_word
-&trans   &kp PG_UP &m15_ClLFT &m16_ClRIGT &kp UP     &m12_PRCNT                         &kp N4    &kp N5  &kp N6    &kp KP_PLUS     &kp KP_MINUS &trans
-&trans   &kp PG_DN &kp LEFT   &kp RIGHT   &kp DOWN   &m14_2BRC  &none       &none       &kp N1    &kp N2  &kp N3    &kp KP_MULTIPLY &kp BSLH     &kp RET
-                   &kp HOME   &kp END     &m13_2BKT  &m13_2BKT  &bootloader &bootloader &kp SPACE &kp N0  &m21_DOTn &kp EQUAL
+&m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &none     &none   &none     &none           &none    &none
+&m4_AT   &m2_2DQT  &m0_HASH   &m11_2PAR   &m10_QMARK &m9_AMPS                           &kp N7    &kp N8  &kp N9    &kp LT          &kp GT   &caps_word
+&trans   &kp PG_UP &kp LEFT   &kp RIGHT   &kp UP     &m12_PRCNT                         &kp N4    &kp N5  &kp N6    &kp KP_PLUS     &td6     &trans
+&trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m14_2BRC  &bootloader &bootloader &kp N1    &kp N2  &kp N3    &kp KP_MULTIPLY &kp BSLH &kp RET
+                   &kp HOME   &kp END     &kp BSPC   &m13_2BKT  &kp RET     &none       &kp SPACE &kp N0  &m21_DOTn &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
