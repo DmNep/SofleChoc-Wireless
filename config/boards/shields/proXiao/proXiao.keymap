@@ -364,14 +364,14 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
- //        m27_OSM: m27_OSM {
-  //          label = "m27_OSM";
- //           compatible = "zmk,behavior-macro";
-  //          #binding-cells = <0>;
-  //          bindings
-  //              = <&macro_tap &sl LSHFT>
-  //              ;
-   //     };
+         m27_OSM: m27_OSM {
+           label = "m27_OSM";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &sl LSHFT>
+                ;
+        };
         
    };
     combos {
@@ -407,13 +407,13 @@
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // -----------------------------------------------------------------------------------------------------
-// |  !  |   "  |   №   |  ;    |  %  |  :   |                 |  C_W  |     |     |     |     |       |
+// |  !  |   "  |   №   |  ;    |  %  |  :   |                 |  C_W  |     |     |     |     |  Del  |
 // |  @  |  ""  |   #   |  ()   |  ?  |  &   |                 |   7   |  8  |  9  |  <  |  >  |       |
 // |     | PGUP |  < -  |  ->   |  ^  |  %   |                 |   4   |  5  |  6  |  +  |  -  |       |
 // |     | PGDN | Ctl<- | Ctl-> |  v  |  {}  | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | ENTER |
 //              | Номе  |  End  | BSPC|  []  | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &none   &none     &none           &none     &none
+&m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &none   &none     &none           &none     &trans
 &m4_AT   &m2_2DQT  &m0_HASH   &m11_2PAR   &m10_QMARK &m9_AMPS                           &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &none
 &trans   &kp PG_UP &kp LEFT   &kp RIGHT   &kp UP     &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
 &trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m14_2BRC  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &kp RET
