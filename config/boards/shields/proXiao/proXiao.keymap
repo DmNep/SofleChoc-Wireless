@@ -363,7 +363,7 @@
                 , <&macro_release &kp LSHFT>
                 , <&macro_release &kp LEFT_ALT>
                 ;
- //       };
+        };
  //        m27_OSM: m27_OSM {
   //          label = "m27_OSM";
  //           compatible = "zmk,behavior-macro";
