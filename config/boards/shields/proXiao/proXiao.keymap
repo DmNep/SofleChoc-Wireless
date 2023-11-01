@@ -363,15 +363,15 @@
                 , <&macro_release &kp LSHFT>
                 , <&macro_release &kp LEFT_ALT>
                 ;
-        };
-         m27_OSM: m27_OSM {
-            label = "m27_OSM";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &sl LSHFT>
-                ;
-        };
+ //       };
+ //        m27_OSM: m27_OSM {
+  //          label = "m27_OSM";
+ //           compatible = "zmk,behavior-macro";
+  //          #binding-cells = <0>;
+  //          bindings
+  //              = <&macro_tap &sl LSHFT>
+  //              ;
+   //     };
         
    };
     combos {
@@ -416,7 +416,7 @@
 &m3_EXCL &m1_DQT   &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &none     &none   &none     &none           &none    &none
 &m4_AT   &m2_2DQT  &m0_HASH   &m11_2PAR   &m10_QMARK &m9_AMPS                           &kp N7    &kp N8  &kp N9    &kp LT          &kp GT   &caps_word
 &trans   &kp PG_UP &kp LEFT   &kp RIGHT   &kp UP     &m12_PRCNT                         &kp N4    &kp N5  &kp N6    &kp KP_PLUS     &td6     &trans
-&trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m14_2BRC  &bootloader &bootloader &kp N1    &kp N2  &kp N3    &kp KP_MULTIPLY &kp BSLH &kp RET
+&trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m14_2BRC  &bootloader &bootloader &kp N1    &kp N2  &kp N3    &kp KP_MULTIPLY &kp FSLH &kp RET
                    &kp HOME   &kp END     &kp BSPC   &m13_2BKT  &kp RET     &none       &kp SPACE &kp N0  &m21_DOTn &kp EQUAL
             >;
 
