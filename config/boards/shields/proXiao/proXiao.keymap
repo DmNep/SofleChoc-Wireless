@@ -366,14 +366,14 @@
                 , <&macro_release &kp LEFT_ALT>
                 ;
         };
-         m27_OSM: m27_OSM {
-           label = "m27_OSM";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &sl LSHFT>
-                ;
-        };
+//         m27_OSM: m27_OSM {
+//           label = "m27_OSM";
+//            compatible = "zmk,behavior-macro";
+//            #binding-cells = <0>;
+//            bindings
+//                = <&macro_tap &sl LSHFT>
+//                ;
+//        };
          m28_AltDel: m28_AltDel {
            label = "m28_AltDel";
             compatible = "zmk,behavior-macro";
@@ -390,7 +390,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp RET>
-                , <&macro_tap &sl LSHFT>
+                , <&macro_tap &skq LSHFT>
                 ;
         };
         
