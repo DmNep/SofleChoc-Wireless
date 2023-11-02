@@ -383,6 +383,11 @@
             key-positions = <55 56>;
             bindings = <&m18_EN>;
         };
+        combo_AltDel {
+            timeout-ms = <50>;
+            key-positions = <51 52>;
+            bindings = <&m18_EN>;
+        };
     };
 
     behaviors {
