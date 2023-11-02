@@ -401,7 +401,7 @@
 &mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                      &kp PSCRN &kp INS    &tog 2    &m23_CMNT &m24_UNCMNT &kp DEL
 &kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                         &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
 &mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                        &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
-&sl LCTRL  &kp Z      &kp X    &kp C     &kp V    &td1      &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
+&sk LCTRL  &kp Z      &kp X    &kp C     &kp V    &td1      &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
                       &kp LGUI &td5      &kp BSPC &sk LSHFT &kp RET &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
             >;
 
