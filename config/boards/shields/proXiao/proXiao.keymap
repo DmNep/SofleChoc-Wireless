@@ -396,9 +396,6 @@
         ignore-modifiers;
       };
     };
-//    &sk {
-//        quick-release;
-//    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -415,7 +412,7 @@
 &kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                          &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
 &mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                         &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
 &skq LCTRL &kp Z      &kp X    &kp C     &kp V    &td1       &none   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
-                      &kp LGUI &td5      &kp BSPC &skq LSHFT &kp RET &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &none
+                      &kp LGUI &td5      &kp BSPC &skq LSHFT &kp RET &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &m21_DOTn
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
