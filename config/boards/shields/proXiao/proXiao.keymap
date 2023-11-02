@@ -374,6 +374,16 @@
                 = <&macro_tap &sl LSHFT>
                 ;
         };
+         m28_AltDel: m28_AltDel {
+           label = "m28_AltDel";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DEL>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
         
    };
     combos {
@@ -386,7 +396,7 @@
         combo_AltDel {
             timeout-ms = <50>;
             key-positions = <51 52>;
-            bindings = <&m18_EN>;
+            bindings = <&m28_AltDel>;
         };
     };
 
