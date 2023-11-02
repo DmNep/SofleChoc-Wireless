@@ -15,17 +15,7 @@
 / {
     behaviors {
 
-        skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY_QUICK_RELEASE";
-            #binding-cells = <1>;
-            bindings = <&kp LSHFT>;
-            release-after-ms = <1000>;
-            quick-release;
-            ignore-modifiers;
-        };
-
-        td0: tap_dance_0 {
+         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
