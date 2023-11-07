@@ -432,7 +432,7 @@
 // |   CTRL  |   Z    |  X  |   C   |  V   |  B(й)  | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |   .   |   /    | ENTER |
 //                    | GUI |  ALT  | BSPC | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_  |  ._^  |   .   |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                           &kp PSCRN &kp INS    &tog 2    &m23_CMNT &m24_UNCMNT &kp DEL
+&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                           &kp PSCRN &kp INS    &tog 3    &m23_CMNT &m24_UNCMNT &kp DEL
 &kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
 &mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
 &skq LCTRL &kp Z      &kp X    &kp C     &kp V    &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
@@ -485,9 +485,9 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC   &kp N2 &kp N3 &kp N4   &kp N5 &kp N6                       &none &none &none &none &none &none
+&kp ESC   &kp N2 &kp N3 &tog 3   &kp N5 &kp N6                       &none &none &none &none &none &none
 &kp TAB   &kp Q  &kp W  &kp E    &kp R  &kp T                        &none &none &none &none &none &none
-&tog 3    &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
+&kp N4    &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
                  &kp Y  &kp LALT &kp U  &kp I &kp O      &none &none &none &none &none
             >;
