@@ -395,19 +395,19 @@
         };
         
    };
- //   combos {
-  //      compatible = "zmk,combos";
- //       combo_EN {
- //           timeout-ms = <50>;
- //           key-positions = <55 56>;
- //           bindings = <&m18_EN>;
- //       };
- //       combo_AltDel {
- //           timeout-ms = <50>;
- //           key-positions = <50 52>;
- //           bindings = <&m28_AltDel>;
- //       };
- //   };
+    combos {
+        compatible = "zmk,combos";
+        combo_EN {
+            timeout-ms = <50>;
+            key-positions = <55 56>;
+            bindings = <&m18_EN>;
+        };
+        combo_AltDel {
+            timeout-ms = <50>;
+            key-positions = <50 52>;
+            bindings = <&m28_AltDel>;
+        };
+    };
 
     behaviors {
       skq: sticky_key_quick_release {
