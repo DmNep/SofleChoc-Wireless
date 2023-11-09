@@ -418,8 +418,8 @@
                 , <&macro_tap &kp RET>
                 ;
         };
-         m31_root: m31_root {
-           label = "m31_root";
+         m31_rt: m31_rt {
+           label = "m31_rt";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -427,7 +427,7 @@
                 , <&macro_tap &kp O>
                 , <&macro_tap &kp O>
                 , <&macro_tap &kp T>
-                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>        
                 , <&macro_press &kp LSHFT>
                 , <&macro_tap &kp R>
                 , <&macro_release &kp LSHFT>
@@ -452,7 +452,7 @@
         };
         combo_AltDel {
             timeout-ms = <50>;
-            key-positions = <50 52>;
+            key-positions = <52 53>;
             bindings = <&m28_AltDel>;
         };
     };
@@ -498,7 +498,7 @@
 // |     | PGDN | Ctl<- | Ctl-> |  v  |  { } | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | ENTER |
 //              | Номе  |  End  | BSPC| SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m2_2DQT  &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &none   &tog 3    &none           &m31_root &m30_psw
+&m3_EXCL &m2_2DQT  &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &none   &tog 3    &none           &m31_rt   &m30_psw
 &m9_AMPS &m4_AT    &m0_HASH   &m11_2PAR   &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &none
 &trans   &kp PG_UP &kp LEFT   &kp RIGHT   &kp UP     &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
 &trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &kp RET
