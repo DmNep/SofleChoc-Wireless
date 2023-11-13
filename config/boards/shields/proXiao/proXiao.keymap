@@ -498,7 +498,7 @@
 // |     | PGDN | Ctl<- | Ctl-> |  v  |  { } | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | ENTER |
 //              | Номе  |  End  | BSPC| SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m2_2DQT  &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &none   &tog 3    &none           &m31_rt   &m30_psw
+&m3_EXCL &m2_2DQT  &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &tog 4  &tog 3    &none           &m31_rt   &m30_psw
 &m9_AMPS &m4_AT    &m0_HASH   &m11_2PAR   &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &none
 &trans   &kp PG_UP &kp LEFT   &kp RIGHT   &kp UP     &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
 &trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &kp RET
@@ -533,9 +533,26 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC   &kp N2 &kp N3 &tog 3   &kp N5 &kp N6                       &none &none &none &none &none &none
+&kp ESC   &tog 3 &kp N3 &kp N2   &kp N5 &kp N6                       &none &none &none &none &none &none
 &kp TAB   &kp Q  &kp W  &kp E    &kp R  &kp T                        &none &none &none &none &none &none
-&kp N4    &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
+&kp LSHFT &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
+&kp LCTRL &kp Z  &kp X  &kp C    &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
+                 &kp Y  &kp LALT &kp U  &kp I &kp O      &none &none &none &none &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp  C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };       
+        gm_layer2 {
+// -------------------------------------------------------------------------------------------
+// |  1   |  2  |  3  |  4  |  5  |  6  |                |     |     |     |     |     |     |
+// | TAB  |  Q  |  W  |  E  |  R  |  T  |                |     |     |     |     |     |     |
+// |      |  A  |  S  |  D  |  F  |  G  |                |     |     |     |     |     |     |
+// | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
+//              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
+            bindings = <
+&kp ESC   &tog 4 &kp N3 &kp N2   &kp N5 &kp N6                       &none &none &none &none &none &none
+&kp TAB   &kp Q  &kp W  &kp E    &kp R  &kp T                        &none &none &none &none &none &none
+&kp LSHFT &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
 &kp LCTRL &kp Z  &kp X  &kp C    &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
                  &kp Y  &kp LALT &kp U  &kp I &kp O      &none &none &none &none &none
             >;
