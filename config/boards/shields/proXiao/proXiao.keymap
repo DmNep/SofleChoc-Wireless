@@ -441,7 +441,132 @@
                 , <&macro_tap &kp RET>
                 ;
         };
-        
+         m32_BA: m32_BA {
+           label = "m32_BA";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp A>
+                ;
+        };
+         m33_BS: m33_BS {
+           label = "m33_BS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp S>
+                ;
+        };
+         m34_BD: m34_BD {
+           label = "m34_BD";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp D>
+                ;
+        };
+         m35_B1: m35_B1 {
+           label = "m35_B2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp N1>
+                ;
+        };
+         m36_BE: m36_BE {
+           label = "m36_BE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp E>
+                ;
+        };
+         m37_BR: m37_BR {
+           label = "m37_BR";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp R>
+                ;
+        };
+         m38_BT: m38_BT {
+           label = "m38_BT";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp T>
+                ;
+        };
+         m39_GA: m39_GA {
+           label = "m39_GA";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp A>
+                ;
+        };
+         m40_GS: m40_GS {
+           label = "m40_GS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp S>
+                ;
+        };
+         m41_GD: m41_GD {
+           label = "m41_GD";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp D>
+                ;
+        };
+         m42_GF: m42_GF {
+           label = "m42_GF";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp F>
+                ;
+        };
+         m43_G1: m43_G1 {
+           label = "m43_G1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp N1>
+                ;
+        };
+         m44_BU: m44_BU {
+           label = "m44_BU";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp U>
+                ;
+        };
+         m45_GU: m45_GU {
+           label = "m45_GU";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp U>
+                ;
+        };
    };
     combos {
         compatible = "zmk,combos";
@@ -533,11 +658,11 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC   &tog 3 &kp N3 &kp N2   &kp N5 &kp N6                       &none &none &none &none &none &none
-&kp TAB   &kp Q  &kp W  &kp E    &kp R  &kp T                        &none &none &none &none &none &none
-&kp LSHFT &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
-&kp LCTRL &kp Z  &kp X  &kp C    &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
-                 &kp Y  &kp LALT &kp U  &kp I &kp O      &none &none &none &none &none
+&kp ESC   &tog 3 &kp N3 &kp N2 &kp N5 &kp N6                 &none &none &none &none &none &none
+&kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T                  &none &none &none &none &none &none
+&kp LSHFT &kp A  &kp S  &kp D  &kp F  &kp G                  &none &none &none &none &none &none
+&kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
+                 &kp Y  &kp I  &kp U  &kp I &kp O      &none &none &none &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp  C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -550,11 +675,11 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC   &tog 4 &kp N3 &kp N2   &kp N5 &kp N6                       &none &none &none &none &none &none
-&kp TAB   &kp Q  &kp W  &kp E    &kp R  &kp T                        &none &none &none &none &none &none
-&kp LSHFT &kp A  &kp S  &kp D    &kp F  &kp G                        &none &none &none &none &none &none
-&kp LCTRL &kp Z  &kp X  &kp C    &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
-                 &kp Y  &kp LALT &kp U  &kp I &kp O      &none &none &none &none &none
+&kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &kp N6                     &none &none &none &none &none &none
+&kp N1  &kp Q   &m44_BU &m36_BE &m37_BR &m38_BT                    &none &none &none &none &none &none
+&m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                      &none &none &none &none &none &none
+&m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B     &kp C_MUTE &none &none &none &none &none &none &none
+                &kp Y   &kp I   &m45_GU &kp LSHFT &kp O      &none &none &none &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp  C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
