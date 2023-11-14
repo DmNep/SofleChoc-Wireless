@@ -717,6 +717,9 @@
 &m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                        &none &none &none &none &none &none
 &m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B   &kp C_MUTE &none     &none &none &none &none &none &none
                 &kp Y   &m36_BE &m44_BU &kp I   &m38_BT    &kp LSHFT &kp O &none &none &none
+
+
+// GT средняя кнопка, GR + GE колесо               
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
