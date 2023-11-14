@@ -585,6 +585,25 @@
                 , <&macro_tap &kp N7>
                 ;
         };
+         m48_C_RET: m48_C_RET {
+           label = "m48_C_RET";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp RET>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+         m49_GE: m49_GE {
+           label = "m49_GE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp E>
+                ;
+        };
    };
     combos {
         compatible = "zmk,combos";
@@ -616,35 +635,35 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// ---------------------------------------------------------------------------------------------------------------------
-// | Esc(F1) | F2(F12)| F3  | F5(F9)|  F10 |  F11   |                  |  PSCR | Ins  | Tog 2 | Ctr / |  C_S / |  Del  |
-// |   TAB   |   Q    |  W  |   E   |  R   |  T(ё)  |                  |   Y   |  U   |  I(щ) |   P   |   [    |       |
-// |  LOWER  |   A    |  S  |   D   |  F   |   G    |                  |   H   |  J   |  K    |   L   |   ;    | LOWER |
-// |   CTRL  |   Z    |  X  |   C   |  V   |  B(й)  | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |   .   |   /    | ENTER |
-//                    | GUI |  ALT  | BSPC | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_  |  ._^  |   .   |
+// -------------------------------------------------------------------------------------------------------------------------
+// | Esc(F1) | F2(F12)| F3  | F5(F9)| F10(F7)|  F11   |                  |  PSCR | Tog 4 | Tog 2 | Ctr / |  C_S / |        |
+// |   TAB   |   Q    |  W  |   E   |   R    |  T(ё)  |                  |   Y   |   U   |  I(щ) |   P   |   [    |  Del   |
+// |  LOWER  |   A    |  S  |   D   |   F    |   G    |                  |   H   |   J   |  K    |   L   |   ;    | LOWER  |
+// |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   |  M(ъ) |  ,    |   .   |   /    | C_ENTR |
+//                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_   |  ._^  |   .   |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                           &kp PSCRN &tog 4     &tog 3    &m23_CMNT &m24_UNCMNT &kp DEL
-&kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
-&mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
-&skq LCTRL &kp Z      &kp X    &kp C     &kp V    &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
-                      &kp LGUI &td5      &kp BSPC &skq LSHFT &m29_EntSft &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &m21_DOTn
+&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &tog 4     &tog 3    &m23_CMNT &m24_UNCMNT &none
+&kp TAB    &kp Q      &kp W    &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &kp DEL
+&mo 1      &kp A      &kp S    &kp D     &kp F      &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
+&skq LCTRL &kp Z      &kp X    &kp C     &kp V      &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &m48_C_RET
+                      &kp LGUI &td5      &kp BSPC   &skq LSHFT &m29_EntSft &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &m21_DOTn
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
-// -----------------------------------------------------------------------------------------------------
-// |  !  |  ""  |   №   |  ;    |  %  |  :   |                 |  C_W  |     | tog3|     |     |       |
-// |  &  |  @   |   #   |  ( )  | [ ] |  ?   |                 |   7   |  8  |  9  |  <  |  >  |       |
-// |     | PGUP |  < -  |  ->   |  ^  |  %   |                 |   4   |  5  |  6  |  +  |  -  |       |
-// |     | PGDN | Ctl<- | Ctl-> |  v  |  { } | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | ENTER |
+// ------------------------------------------------------------------------------------------------------
+// |  !  |  ""  |   №   |  ;    |  %  |  :   |                 |  C_W  |     |     |     |     |        |
+// |  &  |  @   |   #   |  ( )  | [ ] |  ?   |                 |   7   |  8  |  9  |  <  |  >  |  Del   |
+// |     | PGUP |  < -  |  ->   |  ^  |  %   |                 |   4   |  5  |  6  |  +  |  -  |        |
+// |     | PGDN | Ctl<- | Ctl-> |  v  |  { } | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | C_ENTR |
 //              | Номе  |  End  | BSPC| SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
-&m3_EXCL &m2_2DQT  &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &tog 4  &tog 3    &none           &m31_rt   &m30_psw
-&m9_AMPS &m4_AT    &m0_HASH   &m11_2PAR   &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &none
+&m3_EXCL &m2_2DQT  &m5_No     &m6_SEMI    &m8_PRCNT  &m7_COLO                           &caps_word &none   &none     &none           &m31_rt   &m30_psw
+&m9_AMPS &m4_AT    &m0_HASH   &m11_2PAR   &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &kp DEL
 &trans   &kp PG_UP &kp LEFT   &kp RIGHT   &kp UP     &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
-&trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &kp RET
+&trans   &kp PG_DN &m15_ClLFT &m16_ClRIGT &kp DOWN   &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &m48_C_RET
                    &kp HOME   &kp END     &kp BSPC   &skq LSHFT &kp RET     &none       &kp SPACE  &kp N0  &m21_DOTn &kp EQUAL
             >;
 
@@ -670,15 +689,15 @@
         };
         gm_layer {
 // -------------------------------------------------------------------------------------------
-// |  1   |  2  |  3  |  4  |  5  |  6  |                |     |     |     |     |     |     |
-// | TAB  |  Q  |  W  |  E  |  R  |  T  |                |     |     |     |     |     |     |
+// | ESC  | off |  3  |  4  |  5  |  6  |                |     |     |     |     |     |     |
+// |  2   |  Q  |  W  |  E  |  R  |  T  |                |     |     |     |     |     |     |
 // |      |  A  |  S  |  D  |  F  |  G  |                |     |     |     |     |     |     |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC   &tog 3 &kp N3 &kp N2 &kp N5 &kp N6                 &none &none &none &none &none &none
-&kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T                  &none &none &none &none &none &none
-&kp LSHFT &kp A  &kp S  &kp D  &kp F  &kp G                  &none &none &none &none &none &none
+&kp ESC   &tog 3 &kp N3 &kp N4 &kp N5 &kp N6                 &none &none &none &none &none &none
+&kp N2    &kp Q  &kp W  &kp E  &kp R  &kp T                  &none &none &none &none &none &none
+&kp N1    &kp A  &kp S  &kp D  &kp F  &kp G                  &none &none &none &none &none &none
 &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
                  &kp Y  &kp I  &kp U  &kp I &kp O      &none &none &none &none &none
             >;
@@ -687,17 +706,17 @@
         };       
         gm_layer2 {
 // -------------------------------------------------------------------------------------------
-// |  1   |  2  |  3  |  4  |  5  |  6  |                |     |     |     |     |     |     |
-// | TAB  |  Q  |  W  |  E  |  R  |  T  |                |     |     |     |     |     |     |
+// | ESC  | off |  3  |  4  |  5  |  6  |                |     |     |     |     |     |     |
+// |  2   |  Q  |  W  |  E  |  R  |  T  |                |     |     |     |     |     |     |
 // |      |  A  |  S  |  D  |  F  |  G  |                |     |     |     |     |     |     |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                    &none &none &none &none &none &none
-&kp N1  &kp Q   &m44_BU &m36_BE &m37_BR &m46_B6                    &none &none &none &none &none &none
-&m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                      &none &none &none &none &none &none
-&m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B     &kp C_MUTE &none &none &none &none &none &none &none
-                &kp Y   &kp I   &m45_GU &kp LSHFT &kp O      &none &none &none &none &none
+&kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                      &none &none &none &none &none &none
+&kp N2  &kp Q   &kp W   &m49_GE &m45_GU &m46_B6                      &none &none &none &none &none &none
+&m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                        &none &none &none &none &none &none
+&m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B   &kp C_MUTE &none     &none &none &none &none &none &none
+                &kp Y   &m36_BE &m44_BU &kp I   &m38_BT    &kp LSHFT &kp O &none &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
