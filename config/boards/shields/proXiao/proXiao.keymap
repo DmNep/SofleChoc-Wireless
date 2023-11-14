@@ -448,6 +448,7 @@
             bindings
                 = <&macro_tap &kp B>
                 , <&macro_tap &kp A>
+                , <&macro_tap &kp O>
                 ;
         };
          m33_BS: m33_BS {
@@ -511,6 +512,7 @@
             bindings
                 = <&macro_tap &kp G>
                 , <&macro_tap &kp A>
+                , <&macro_tap &kp O>
                 ;
         };
          m40_GS: m40_GS {
@@ -710,21 +712,18 @@
 // |  2   |  Q  |  W  |  E  |  R  |  T  |                |     |     |     |     |     |     |
 // |      |  A  |  S  |  D  |  F  |  G  |                |     |     |     |     |     |     |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
-//              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
+//              |  Y  | ALT |  U  |  I  |  O   |  | LSHFT|  O  |     |     |     |     
             bindings = <
 &kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                      &none &none &none &none &none &none
 &kp N2  &kp Q   &kp W   &m49_GE &m45_GU &m46_B6                      &none &none &none &none &none &none
 &m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                        &none &none &none &none &none &none
 &m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B   &kp C_MUTE &none     &none &none &none &none &none &none
                 &kp Y   &m36_BE &m44_BU &kp I   &m38_BT    &kp LSHFT &kp O &none &none &none
-
-
 // GT средняя кнопка, GR + GE колесо               
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-
     };
 };
    
