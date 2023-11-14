@@ -700,7 +700,7 @@
                 &kp Y   &kp I   &m45_GU &kp LSHFT &kp O      &none &none &none &none &none
             >;
 
-            sensor-bindings = <&inc_dec_td td1 td2 &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp td1 td2 &inc_dec_kp PG_UP PG_DN>;
         };
 
     };
