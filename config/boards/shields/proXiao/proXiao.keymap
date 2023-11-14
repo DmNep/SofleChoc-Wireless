@@ -623,7 +623,7 @@
 // |   CTRL  |   Z    |  X  |   C   |  V   |  B(й)  | PSCR  |  | MUTE  |   N   | M(ъ) |  ,    |   .   |   /    | ENTER |
 //                    | GUI |  ALT  | BSPC | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_  |  ._^  |   .   |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                           &kp PSCRN &tog 4    &tog 3    &m23_CMNT &m24_UNCMNT &kp DEL
+&mt F1 ESC &mt F12 F2 &kp F3   &mt F9 F5 &kp F10  &kp F11                           &kp PSCRN &tog 4     &tog 3    &m23_CMNT &m24_UNCMNT &kp DEL
 &kp TAB    &kp Q      &kp W    &kp E     &kp R    &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &none
 &mo 1      &kp A      &kp S    &kp D     &kp F    &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
 &skq LCTRL &kp Z      &kp X    &kp C     &kp V    &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &kp RET
@@ -693,8 +693,10 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                    &none &none &none &none &none &none
-&kp N1  &kp Q   &m44_BU &m36_BE &m37_BR &m46_B6                    &none &none &none &none &none &none
+&kp ESC &tog 4  &kp N3  &kp N2  &m46_B6 &m47_G6                     &none &none &none &none &none &none
+&kp N1  &kp Q   &m44_BU &m36_BE &m37_BR &m38_BT                    &none &none &none &none &none &none
+// &kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                    &none &none &none &none &none &none
+// &kp N1  &kp Q   &m44_BU &m36_BE &m37_BR &m46_B6                    &none &none &none &none &none &none
 &m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                      &none &none &none &none &none &none
 &m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B     &kp C_MUTE &none &none &none &none &none &none &none
                 &kp Y   &kp I   &m45_GU &kp LSHFT &kp O      &none &none &none &none &none
