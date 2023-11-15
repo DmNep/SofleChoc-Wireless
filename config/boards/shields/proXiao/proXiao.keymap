@@ -722,7 +722,8 @@
 // GT средняя кнопка, GR + GE колесо               
             >;
 
-            sensor-bindings = <&inc_dec_kp &m36_BE &m44_BU>;
+//            sensor-bindings = <&inc_dec_kp &m36_BE &m44_BU &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
