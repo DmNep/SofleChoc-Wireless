@@ -606,13 +606,113 @@
                 , <&macro_tap &kp E>
                 ;
         };
-         m49_GUI_L: m49_GUI_L {
-           label = "m49_GUI_L";
+         m50_GUI_L: m50_GUI_L {
+           label = "m50_GUI_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp L>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m51_GUI_D: m51_GUI_D {
+           label = "m51_GUI_D";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m52_GUI_U: m52_GUI_U {
+           label = "m52_GUI_U";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp UP>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m53_GUI_D: m53_GUI_D {
+           label = "m53_GUI_D";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp DOWN>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m54_GUI_L: m54_GUI_L {
+           label = "m54_GUI_L";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m55_GUI_1: m55_GUI_1 {
+           label = "m55_GUI_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N1>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m56_GUI_2: m56_GUI_2 {
+           label = "m56_GUI_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m57_GUI_3: m57_GUI_3 {
+           label = "m57_GUI_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N3>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m58_GUI_4: m58_GUI_4 {
+           label = "m58_GUI_4";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N4>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m59_GUI_5: m59_GUI_5 {
+           label = "m59_GUI_5";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N5>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m60_GUI_6: m60_GUI_6 {
+           label = "m60_GUI_6";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp N6>
                 , <&macro_release &kp LGUI>
                 ;
         };
@@ -743,11 +843,11 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
-&kp ESC   &tog 3 &kp N3   &kp N4 &kp N5 &kp N6                 &none &none &none &none &none &none
-&kp N2    &kp Q  &kp W    &kp E  &kp R  &kp T                  &none &none &none &none &none &none
-&kp N1    &kp A  &kp S    &kp D  &kp F  &kp G                  &none &none &none &none &none &none
-&kp LCTRL &kp Z  &kp X    &kp C  &kp V  &kp B &kp C_MUTE &none &none &none &none &none &none &none
-                 &kp LGUI &kp I  &kp U  &kp I &kp O      &none &none &none &none &none
+&m55_GUI_1 &m56_GUI_2 &m57_GUI_3 &m58_GUI_4 &m59_GUI_5 &m60_GUI_6                  &none &none &none &none &none &none
+&m51_GUI_D &none      &none      &none      &none      &none                       &none &none &none &none &none &none
+&m52_GUI_U &none      &none      &none      &none      &none                       &none &none &none &none &none &none
+&m53_GUI_D &m54_GUI_L &none      &none      &none      &none      &kp C_MUTE &none &none &none &none &none &none &none
+                      &trans     &kp LGUI   &none      &none      &m50_GUI_L &none &none &none &none &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
