@@ -716,7 +716,17 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-   };
+          m67_GUI_R: m67_GUI_R {
+           label = "m67_GUI_R";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+  };
     combos {
         compatible = "zmk,combos";
         combo_EN {
@@ -844,10 +854,10 @@
 //              |  Y  | ALT |  U  |  I  |  O   |  |      |     |     |     |     |     
             bindings = <
 &m55_GUI_1 &m56_GUI_2 &m57_GUI_3 &m58_GUI_4 &m59_GUI_5 &m60_GUI_6                  &none &none &none &none &none &none
-&m51_GUI_D &none      &none      &none      &none      &none                       &none &none &none &none &none &none
-&m52_GUI_U &none      &none      &none      &none      &none                       &none &none &none &none &none &none
-&m53_GUI_D &m54_GUI_L &none      &none      &none      &none      &kp C_MUTE &none &none &none &none &none &none &none
-                      &trans     &kp LGUI   &none      &none      &m50_GUI_L &none &none &none &none &none
+&none      &none      &none      &none      &none      &none                       &none &none &none &none &none &none
+&none      &m52_GUI_U &none      &none      &none      &none                       &none &none &none &none &none &none
+&none      &m53_GUI_D &m54_GUI_L &m67_GUI_R &none      &none      &kp C_MUTE &none &none &none &none &none &none &none
+                      &trans     &kp LGUI   &none      &m51_GUI_D &m50_GUI_L &none &none &none &none &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
