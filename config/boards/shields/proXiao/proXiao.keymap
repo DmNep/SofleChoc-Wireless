@@ -321,7 +321,7 @@
                 ;
         };
          m23_CMNT: m23_CMNT {
-            label = "m22_AltF4";
+            label = "m23_CMNT";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
