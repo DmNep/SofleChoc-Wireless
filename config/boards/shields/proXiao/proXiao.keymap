@@ -887,6 +887,11 @@
             key-positions = <52 53>;
             bindings = <&m28_AltDel>;
         };
+        combo_F12 {
+            timeout-ms = <50>;
+            key-positions = <2 14>;
+            bindings = <&m28_AltDel>;
+        };
     };
 
     behaviors {
