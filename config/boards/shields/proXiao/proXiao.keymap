@@ -854,8 +854,8 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
-         m7_GUI_V: m7_GUI_V {
-           label = "m7_GUI_V";
+         m73_GUI_V: m73_GUI_V {
+           label = "m73_GUI_V";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
