@@ -932,7 +932,7 @@
             bindings = <
 
 &m3_EXCL &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &caps_word &none   &none     &none           &m31_rt   &m30_psw
-&m9_AMPS &m4_AT     &m0_HASH    &m11_2PAR &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &kp DEL
+&m9_AMPS &m4_AT     &m0_HASH    &m11_2PAR &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &none
 &trans   &m15_ClLFT &m16_ClRIGT &kp UP    &kp PG_UP  &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
 &trans   &kp LEFT   &kp RIGHT   &kp DOWN  &kp PG_DN  &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &m48_C_RET
                     &kp HOME    &kp END   &kp BSPC   &skq LSHFT &kp RET     &none       &kp SPACE  &kp N0  &m21_DOTn &kp EQUAL
