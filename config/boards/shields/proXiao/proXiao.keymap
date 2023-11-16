@@ -906,13 +906,13 @@
 
         default_layer {
 // ----------------------------------------------------------------------------------------------------------------------
-// | Esc(F1) | F2(F12)| F3  | F5(F9)| F10(F7)|  F11   |                  |  PSCR |      | Ctr / |  C_S / | DEL |  PGUP  |
+// | Esc(F1) | F2(F12)| F3  | F5(F7)| F10(F9)|  F11   |                  |  PSCR |      | Ctr / |  C_S / | DEL |  PGUP  |
 // |   TAB   |   Q    |  W  |   E   |   R    |  T(ё)  |                  |   Y   |  U   | I(щ)  |   P    |  [  |  PGDW  |
 // |  LOWER  |   A    |  S  |   D   |   F    |   G    |                  |   H   |  J   |   K   |   L    |  ;  | LOWER  |
 // |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   | M(ъ) |   ,   |   .    |  /  | C_ENTR |
 //                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_  |   ._^ |   .    |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3     &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &none      &m23_CMNT &m24_UNCMNT &kp DEL  &kp PG_UP
+&mt F1 ESC &mt F12 F2 &kp F3     &mt F7 F5 &mt F7 F10 &kp F11                           &kp PSCRN &none      &m23_CMNT &m24_UNCMNT &kp DEL  &kp PG_UP
 &kp TAB    &kp Q      &kp W      &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P       &kp LBKT &kp PG_DN
 &mo 1      &kp A      &kp S      &kp D     &kp F      &kp G                             &kp H     &kp J      &kp K     &kp L       &kp SEMI &mo 1
 &skq LCTRL &kp Z      &kp X      &kp C     &kp V      &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT     &kp FSLH &m48_C_RET
