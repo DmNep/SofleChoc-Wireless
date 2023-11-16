@@ -872,6 +872,7 @@
 // |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   |  M(ъ) |  ,    |   .   |   /    | C_ENTR |
 //                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_   |  ._^  |   .   |
             bindings = <
+&mt F1 ESC &mt F12 F2 &kp F3      &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &tog 4     &tog 3    &m23_CMNT &m24_UNCMNT &none
 &kp TAB    &kp Q      &kp W       &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &kp DEL
 &mo 1      &kp A      &kp S       &kp D     &kp F      &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
 &skq LCTRL &kp Z      &kp X       &kp C     &kp V      &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &m48_C_RET
