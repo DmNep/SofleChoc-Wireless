@@ -890,10 +890,11 @@
 // |     | PGDN | Ctl<- | Ctl-> |  v  |  { } | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | C_ENTR |
 //              | Номе  |  End  | BSPC| SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
+
 &m3_EXCL &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &caps_word &none   &none     &none           &m31_rt   &m30_psw
 &m9_AMPS &m4_AT     &m0_HASH    &m11_2PAR &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &kp DEL
-&trans   &m15_ClLFT &m16_ClRIGT &kp PG_UP &kp UP     &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
-&trans   &kp LEFT   &kp RIGHT   &kp PG_DN &kp DOWN   &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &m48_C_RET
+&trans   &m15_ClLFT &m16_ClRIGT &kp UP    &kp PG_UP  &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
+&trans   &kp LEFT   &kp RIGHT   &kp DN    &kp PG_DN  &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &m48_C_RET
                     &kp HOME    &kp END   &kp BSPC   &skq LSHFT &kp RET     &none       &kp SPACE  &kp N0  &m21_DOTn &kp EQUAL
             >;
 
@@ -963,8 +964,8 @@
             bindings = <
 &m55_GUI_1 &m56_GUI_2 &m57_GUI_3 &m58_GUI_4 &m59_GUI_5 &m60_GUI_6                  &none &none &none &none &none &none
 &m61_G_S_1 &m62_G_S_2 &m63_G_S_3 &m64_G_S_4 &m65_G_S_5 &m66_G_S_6                  &none &none &none &none &none &none
-&m52_GUI_U &m68_G_S_L &m69_G_S_R &none      &none      &m70_G_S_U                  &none &none &none &none &none &none
-&m53_GUI_D &m54_GUI_L &m67_GUI_R &none      &none      &none      &kp C_MUTE &none &none &none &none &none &none &none
+&none      &m68_G_S_L &m69_G_S_R &m52_GUI_U &none      &m70_G_S_U                  &none &none &none &none &none &none
+&none      &m54_GUI_L &m67_GUI_R &m53_GUI_D &none      &none      &kp C_MUTE &none &none &none &none &none &none &none
                       &trans     &kp LGUI   &none      &m51_GUI_D &m50_GUI_L &none &none &none &none &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
