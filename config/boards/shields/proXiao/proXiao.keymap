@@ -834,6 +834,36 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
+         m71_GUI_E: m71_GUI_E {
+           label = "m71_GUI_E";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m72_GUI_I: m72_GUI_I {
+           label = "m72_GUI_I";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp I>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+         m7_GUI_V: m7_GUI_V {
+           label = "m7_GUI_V";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LGUI>
+                ;
+        };
   };
     combos {
         compatible = "zmk,combos";
@@ -872,11 +902,11 @@
 // |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   |  M(ъ) |  ,    |   .   |   /    | C_ENTR |
 //                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_   |  ._^  |   .   |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3      &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &tog 4     &tog 3    &m23_CMNT &m24_UNCMNT &none
-&kp TAB    &kp Q      &kp W       &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &kp DEL
-&mo 1      &kp A      &kp S       &kp D     &kp F      &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
-&skq LCTRL &kp Z      &kp X       &kp C     &kp V      &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &m48_C_RET
-                      &lt 5 LGUI  &td5      &kp BSPC   &skq LSHFT &m29_EntSft &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &m21_DOTn
+&mt F1 ESC &mt F12 F2 &kp F3     &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &tog 4     &tog 3    &m23_CMNT &m24_UNCMNT &none
+&kp TAB    &kp Q      &kp W      &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P     &kp LBKT    &kp DEL
+&mo 1      &kp A      &kp S      &kp D     &kp F      &kp G                             &kp H     &kp J      &kp K     &kp L     &kp SEMI    &mo 1
+&skq LCTRL &kp Z      &kp X      &kp C     &kp V      &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT   &kp FSLH    &m48_C_RET
+                      &lt 5 LGUI &td5      &kp BSPC   &skq LSHFT &m29_EntSft &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &m21_DOTn
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -964,9 +994,9 @@
             bindings = <
 &m55_GUI_1 &m56_GUI_2 &m57_GUI_3 &m58_GUI_4 &m59_GUI_5 &m60_GUI_6                  &none &none &none &none &none &none
 &m61_G_S_1 &m62_G_S_2 &m63_G_S_3 &m64_G_S_4 &m65_G_S_5 &m66_G_S_6                  &none &none &none &none &none &none
-&none      &m68_G_S_L &m69_G_S_R &m52_GUI_U &none      &m70_G_S_U                  &none &none &none &none &none &none
-&none      &m54_GUI_L &m67_GUI_R &m53_GUI_D &none      &none      &kp C_MUTE &none &none &none &none &none &none &none
-                      &trans     &kp LGUI   &none      &m51_GUI_D &m50_GUI_L &none &none &none &none &none
+&none      &m68_G_S_L &m69_G_S_R &m52_GUI_U &m70_G_S_U &m73_G_S_V                  &none &none &none &none &none &none
+&none      &m54_GUI_L &m67_GUI_R &m53_GUI_D &none      &m72_GUI_I &kp C_MUTE &none &none &none &none &none &none &none
+                      &trans     &m71_GUI_E &none      &m51_GUI_D &m50_GUI_L &none &none &none &none &none
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
