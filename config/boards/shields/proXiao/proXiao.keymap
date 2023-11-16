@@ -905,12 +905,12 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// -------------------------------------------------------------------------------------------------------------------------
-// | Esc(F1) | F2(F12)| F3  | F5(F9)| F10(F7)|  F11   |                  |  PSCR | Tog 4 | Tog 2 | Ctr / |  C_S / |        |
-// |   TAB   |   Q    |  W  |   E   |   R    |  T(ё)  |                  |   Y   |   U   |  I(щ) |   P   |   [    |  Del   |
-// |  LOWER  |   A    |  S  |   D   |   F    |   G    |                  |   H   |   J   |  K    |   L   |   ;    | LOWER  |
-// |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   |  M(ъ) |  ,    |   .   |   /    | C_ENTR |
-//                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_   |  ._^  |   .   |
+// ----------------------------------------------------------------------------------------------------------------------
+// | Esc(F1) | F2(F12)| F3  | F5(F9)| F10(F7)|  F11   |                  |  PSCR |      | Ctr / |  C_S / | DEL |  PGUP  |
+// |   TAB   |   Q    |  W  |   E   |   R    |  T(ё)  |                  |   Y   |  U   | I(щ)  |   P    |  [  |  PGDW  |
+// |  LOWER  |   A    |  S  |   D   |   F    |   G    |                  |   H   |  J   |   K   |   L    |  ;  | LOWER  |
+// |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   | M(ъ) |   ,   |   .    |  /  | C_ENTR |
+//                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_  |   ._^ |   .    |
             bindings = <
 &mt F1 ESC &mt F12 F2 &kp F3     &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &none      &m23_CMNT &m24_UNCMNT &kp DEL  &kp PG_UP
 &kp TAB    &kp Q      &kp W      &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P       &kp LBKT &kp PG_DN
@@ -923,12 +923,12 @@
         };
 
         lower_layer {
-// ------------------------------------------------------------------------------------------------------
-// |  !  |  ""  |   №   |  ;    |  %  |  :   |                 |  C_W  |     |     |     |     |        |
-// |  &  |  @   |   #   |  ( )  | [ ] |  ?   |                 |   7   |  8  |  9  |  <  |  >  |  Del   |
-// |     | PGUP |  < -  |  ->   |  ^  |  %   |                 |   4   |  5  |  6  |  +  |  -  |        |
-// |     | PGDN | Ctl<- | Ctl-> |  v  |  { } | boot  |  | boot |   1   |  2  |  3  |  *  |  /  | C_ENTR |
-//              | Номе  |  End  | BSPC| SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
+// -----------------------------------------------------------------------------------------------------------
+// |  !  |  ""   |   №   |   ;   |  %   |  :   |                 |  C_W  | tog2 | tog3 | tog4 | DEL |        |
+// |  &  |   @   |   #   |  ( )  | [ ]  |  ?   |                 |   7   |  8   |  9   |  <   |  >  |        |
+// |     | Ctl<- | Ctl-> |   ^   | PGUP |  %   |                 |   4   |  5   |  6   |  +   |  -  |        |
+// |     |  < -  |  ->   |   v   | PGDW | { }  | boot  |  | boot |   1   |  2   |  3   |  *   |  /  | C_ENTR |
+//               | Номе  |  End  | BSPC | SHFT | ENTER |  |      | SPACE |  0   |  .   |  =   |
             bindings = <
 
 &m3_EXCL &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &caps_word &tog 2  &tog 3    &tog 4          &kp DEL   &m30_psw
@@ -945,8 +945,8 @@
 // ----------------------------------------------------------------------------------------------------------------
 // |  ESC  |  off  |       |      |      |        |                  |       |     |     | Ctr / | C_S / |        |
 // |       |       |       |      |      |        |                  |       |     |     |       |       |        |
-// |       | Ctl<- | Ctl-> |  ^   |  ^   |        |                  |       |     |     |       |       |        |
-// | LCTRL |  < -  |  ->   |  v   |  v   |        |                  |       |     |     |       |       | C_ENTR |
+// |       | Ctl<- | Ctl-> |  ^   | PGUP |        |                  |       |     |     |       |       |        |
+// | LCTRL |  < -  |  ->   |  v   | PGDW |        |                  |       |     |     |       |       | C_ENTR |
 //                 | OBNU  | OBND | BSPC | ^ SHFT | ENTER |  |       | SPACE |     |     |       |
             bindings = <
 &kp ESC   &tog 2     &none       &none       &none     &none                    &none     &none &none &m23_CMNT &m24_UNCMNT &none
