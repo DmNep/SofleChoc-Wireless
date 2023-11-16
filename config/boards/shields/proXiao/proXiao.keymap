@@ -912,7 +912,7 @@
 // |   CTRL  |   Z    |  X  |   C   |   V    |  B(й)  | PSCR  |  | MUTE  |   N   |  M(ъ) |  ,    |   .   |   /    | C_ENTR |
 //                    | GUI |  ALT  |  BSPC  | ^ SHFT | ENTR ^|  |  RU   | SPACE |  ,_   |  ._^  |   .   |
             bindings = <
-&mt F1 ESC &mt F12 F2 &kp F3     &mt F9 F5 &mt F7 F10 &kp F11                           &PSCR     &none      &m23_CMNT &m24_UNCMNT &kp DEL  &kp PG_UP
+&mt F1 ESC &mt F12 F2 &kp F3     &mt F9 F5 &mt F7 F10 &kp F11                           &kp PSCRN &none      &m23_CMNT &m24_UNCMNT &kp DEL  &kp PG_UP
 &kp TAB    &kp Q      &kp W      &kp E     &kp R      &td0                              &kp Y     &kp U      &td2      &kp P       &kp LBKT &kp PG_DN
 &mo 1      &kp A      &kp S      &kp D     &kp F      &kp G                             &kp H     &kp J      &kp K     &kp L       &kp SEMI &mo 1
 &skq LCTRL &kp Z      &kp X      &kp C     &kp V      &td1       &kp PSCRN   &kp C_MUTE &kp N     &td3       &kp COMMA &kp DOT     &kp FSLH &m48_C_RET
@@ -931,8 +931,8 @@
 //              | Номе  |  End  | BSPC| SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
 
-&m3_EXCL &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &caps_word &tog 2  &tog 3    &tog 4          &m31_rt   &m30_psw
-&m9_AMPS &m4_AT     &m0_HASH    &m11_2PAR &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &none
+&m3_EXCL &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &caps_word &tog 2  &tog 3    &tog 4          &kp DEL   &m30_psw
+&m9_AMPS &m4_AT     &m0_HASH    &m11_2PAR &m13_2BKT  &m10_QMARK                         &kp N7     &kp N8  &kp N9    &kp LT          &kp GT    &m31_rt
 &trans   &m15_ClLFT &m16_ClRIGT &kp UP    &kp PG_UP  &m12_PRCNT                         &kp N4     &kp N5  &kp N6    &kp KP_PLUS     &td6      &trans
 &trans   &kp LEFT   &kp RIGHT   &kp DOWN  &kp PG_DN  &m13_2BKT  &bootloader &bootloader &kp N1     &kp N2  &kp N3    &kp KP_MULTIPLY &kp SLASH &m48_C_RET
                     &kp HOME    &kp END   &kp BSPC   &skq LSHFT &kp RET     &none       &kp SPACE  &kp N0  &m21_DOTn &kp EQUAL
