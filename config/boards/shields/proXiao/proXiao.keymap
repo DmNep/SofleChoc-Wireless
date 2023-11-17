@@ -924,7 +924,7 @@
                   &lt 5 LGUI &td5   &kp BSPC &skq LSHFT &m29_EntSft &m17_RU    &kp SPACE &m19_COMMA &m20_DOT  &m21_DOTn
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp F3 LS(F3) &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
