@@ -965,8 +965,8 @@
 //                 | OBNU  | OBND | BSPC | ^ SHFT | ENTER |  | Ctrl S | SPACE |     |     |       |
             bindings = <
 &kp ESC   &tog 2     &none       &none       &none     &none                       &none     &none &none &m23_CMNT &m24_UNCMNT &none
-&none     &none      &none       &none       &none     &none                       &none     &none &none &none     &none       &none
-&none     &m15_ClLFT &m16_ClRIGT &kp UP      &kp PG_UP &none                       &none     &none &none &none     &none       &none
+&kt LC(V) &none      &none       &none       &none     &none                       &none     &none &none &none     &none       &none
+&kt LC(C) &m15_ClLFT &m16_ClRIGT &kp UP      &kp PG_UP &none                       &none     &none &none &none     &none       &none
 &kp LCTRL &kp LEFT   &kp RIGHT   &kp DOWN    &kp PG_DN &none     &none    &none    &none     &none &none &none     &none       &m48_C_RET   
                      &m26_OBNU   &m25_OBND   &kp BSPC  &kp LSHFT &kp RET  &m75_C_S &kp SPACE &none &none
             >;
