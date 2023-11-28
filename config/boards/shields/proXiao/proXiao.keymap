@@ -874,6 +874,16 @@
                 , <&macro_release &kp LGUI>
                 ;
         };
+         m75_C_S: m75_C_S {
+           label = "m75_C_S";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
   };
     combos {
         compatible = "zmk,combos";
@@ -947,18 +957,18 @@
         };
 
         raise_layer {
-// ----------------------------------------------------------------------------------------------------------------
-// |  ESC  |  off  |       |      |      |        |                  |       |     |     | Ctr / | C_S / |        |
-// |       |       |       |      |      |        |                  |       |     |     |       |       |        |
-// |       | Ctl<- | Ctl-> |  ^   | PGUP |        |                  |       |     |     |       |       |        |
-// | LCTRL |  < -  |  ->   |  v   | PGDW |        |                  |       |     |     |       |       | C_ENTR |
-//                 | OBNU  | OBND | BSPC | ^ SHFT | ENTER |  |       | SPACE |     |     |       |
+// -----------------------------------------------------------------------------------------------------------------
+// |  ESC  |  off  |       |      |      |        |                   |       |     |     | Ctr / | C_S / |        |
+// |       |       |       |      |      |        |                   |       |     |     |       |       |        |
+// |       | Ctl<- | Ctl-> |  ^   | PGUP |        |                   |       |     |     |       |       |        |
+// | LCTRL |  < -  |  ->   |  v   | PGDW |        |                   |       |     |     |       |       | C_ENTR |
+//                 | OBNU  | OBND | BSPC | ^ SHFT | ENTER |  | Ctrl S | SPACE |     |     |       |
             bindings = <
-&kp ESC   &tog 2     &none       &none       &none     &none                    &none     &none &none &m23_CMNT &m24_UNCMNT &none
-&none     &none      &none       &none       &none     &none                    &none     &none &none &none     &none       &none
-&none     &m15_ClLFT &m16_ClRIGT &kp UP      &kp PG_UP &none                    &none     &none &none &none     &none       &none
-&kp LCTRL &kp LEFT   &kp RIGHT   &kp DOWN    &kp PG_DN &none     &none    &none &none     &none &none &none     &none       &m48_C_RET   
-                     &m26_OBNU   &m25_OBND   &kp BSPC  &kp LSHFT &kp RET  &none &kp SPACE &none &none
+&kp ESC   &tog 2     &none       &none       &none     &none                       &none     &none &none &m23_CMNT &m24_UNCMNT &none
+&none     &none      &none       &none       &none     &none                       &none     &none &none &none     &none       &none
+&none     &m15_ClLFT &m16_ClRIGT &kp UP      &kp PG_UP &none                       &none     &none &none &none     &none       &none
+&kp LCTRL &kp LEFT   &kp RIGHT   &kp DOWN    &kp PG_DN &none     &none    &none    &none     &none &none &none     &none       &m48_C_RET   
+                     &m26_OBNU   &m25_OBND   &kp BSPC  &kp LSHFT &kp RET  &m75_C_S &kp SPACE &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
