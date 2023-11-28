@@ -884,6 +884,26 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+         m76_C_C: m76_C_C {
+           label = "m76_C_C";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+         m77_C_V: m77_C_V {
+           label = "m77_C_V";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
   };
     combos {
         compatible = "zmk,combos";
@@ -964,11 +984,11 @@
 // | LCTRL |  < -  |  ->   |  v   | PGDW |        |                   |       |     |     |       |       | C_ENTR |
 //                 | OBNU  | OBND | BSPC | ^ SHFT | ENTER |  | Ctrl S | SPACE |     |     |       |
             bindings = <
-&kp ESC   &tog 2     &none       &none       &none     &none                       &none     &none &none &m23_CMNT &m24_UNCMNT &none
-&kt LC(V) &none      &none       &none       &none     &none                       &none     &none &none &none     &none       &none
-&kt LC(C) &m15_ClLFT &m16_ClRIGT &kp UP      &kp PG_UP &none                       &none     &none &none &none     &none       &none
-&kp LCTRL &kp LEFT   &kp RIGHT   &kp DOWN    &kp PG_DN &none     &none    &none    &none     &none &none &none     &none       &m48_C_RET   
-                     &m26_OBNU   &m25_OBND   &kp BSPC  &kp LSHFT &kp RET  &m75_C_S &kp SPACE &none &none
+&kp ESC   &tog 2     &none       &none       &none     &none                         &none     &none &none &m23_CMNT &m24_UNCMNT &none
+&m77_C_V  &none      &none       &none       &none     &none                         &none     &none &none &none     &none       &none
+&m76_C_C  &m15_ClLFT &m16_ClRIGT &kp UP      &kp PG_UP &none                         &none     &none &none &none     &none       &none
+&kp LCTRL &kp LEFT   &kp RIGHT   &kp DOWN    &kp PG_DN &none     &none      &none    &none     &none &none &none     &none       &m48_C_RET   
+                     &m26_OBNU   &m25_OBND   &kp BSPC  &kp LSHFT &m48_C_RET &m75_C_S &kp SPACE &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
