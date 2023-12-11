@@ -909,7 +909,7 @@
         compatible = "zmk,combos";
         combo_EN {
             timeout-ms = <50>;
-            key-positions = <55 56>;
+            key-positions = <54 54>;
             bindings = <&m18_EN>;
         };
         combo_AltDel {
