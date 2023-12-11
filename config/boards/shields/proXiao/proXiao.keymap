@@ -296,8 +296,8 @@
                 , <&macro_tap &kp KP_N4 &kp KP_N6>
                 , <&macro_release &kp LEFT_ALT>
                 , <&macro_tap &kp SPACE>
-//                , <&macro_tap &sl LSHFT>
-                , <&macro_tap &skq LSHFT>
+                , <&macro_tap &sl LSHFT>
+//                , <&macro_tap &skq LSHFT>
                 ;
         };
          m21_DOTn: m21_DOTn {
