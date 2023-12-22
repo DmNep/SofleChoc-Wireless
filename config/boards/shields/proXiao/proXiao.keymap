@@ -966,7 +966,7 @@
 //               | Номе  |  End  | BSPC | SHFT | ENTER |  |      | SPACE |  0  |  .  |  =  |
             bindings = <
 
-&m3_EXCL &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &kp LT    &kp GT  &kp SLASH &kp KP_MULTIPLY &td6        &m30_psw
+&tog 3   &m2_2DQT   &m5_No      &m6_SEMI  &m8_PRCNT  &m7_COLO                           &kp LT    &kp GT  &kp SLASH &kp KP_MULTIPLY &td6        &m30_psw
 &m9_AMPS &m4_AT     &m0_HASH    &m11_2PAR &m13_2BKT  &m10_QMARK                         &tog 4    &kp N7  &kp N8    &kp N9          &kp KP_PLUS &m31_rt
 &trans   &m15_ClLFT &m16_ClRIGT &kp UP    &kp PG_UP  &m12_PRCNT                         &tog 3    &kp N4  &kp N5    &kp N6          &none       &trans
 &trans   &kp LEFT   &kp RIGHT   &kp DOWN  &kp PG_DN  &m13_2BKT  &bootloader &bootloader &tog 2    &kp N1  &kp N2    &kp N3          &none       &m48_C_RET
