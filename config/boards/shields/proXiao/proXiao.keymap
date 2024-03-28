@@ -904,6 +904,24 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+         m78_BN: m78_BN {
+           label = "m78_BN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp N>
+                ;
+        };
+         m79_GN: m79_GN {
+           label = "m79_GN";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp N>
+                ;
+        };
   };
     combos {
         compatible = "zmk,combos";
@@ -1005,7 +1023,7 @@
 &kp ESC   &tog 3 &kp N3   &kp N4 &kp N5 &kp N6                     &none &none &none &none &none &none
 &kp N2    &kp Q  &kp W    &kp E  &kp R  &kp T                      &none &none &none &none &none &none
 &kp LSHFT &kp A  &kp S    &kp D  &kp F  &kp G                      &none &none &none &none &none &none
-&kp LCTRL &kp Z  &kp X    &kp C  &kp V  &kp B &kp C_MUTE &none     &none &none &none &none &none &none
+&kp LCTRL &kp Z  &kp X    &kp C  &kp N  &kp N &kp C_MUTE &none     &none &none &none &none &none &none
                  &kp LALT &kp Y  &kp U  &kp I &kp O      &kp LSHFT &kp O &none &none &none
             >;
 
@@ -1020,11 +1038,11 @@
 // | B_1 | B_A | B_S | B_D |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //             |  Y  | B_E | B_U |  I  | B_T  |  | LSHFT|  O  |     |     |     |     
             bindings = <
-&kp ESC &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                     &none &none &none &none &none &none
-&kp N2  &kp Q   &kp W   &m49_GE &m45_GU &m46_B6                     &none &none &none &none &none &none
-&m43_G1 &m39_GA &m40_GS &m41_GD &m42_GF &kp G                       &none &none &none &none &none &none
-&m35_B1 &m32_BA &m33_BS &m34_BD &kp V   &kp B  &kp C_MUTE &none     &none &none &none &none &none &none
-                &kp Y   &m36_BE &m44_BU &kp I  &m38_BT    &kp LSHFT &kp O &none &none &none
+&kp ESC   &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                       &none &none &none &none &none &none
+&kp N2    &kp Q   &kp W   &m49_GE &m45_GU &m46_B6                       &none &none &none &none &none &none
+&kp LSHFT &m39_GA &m40_GS &m41_GD &m42_GF &kp G                         &none &none &none &none &none &none
+&kp LCTRL &m32_BA &m33_BS &m34_BD &m79_GN &m78_BN  &kp C_MUTE &none     &none &none &none &none &none &none
+                  &kp Y   &m36_BE &m44_BU &kp I    &m38_BT    &kp LSHFT &kp O &none &none &none
             >;            
 // GT средняя кнопка, GR + GE колесо 
 //            sensor-bindings = <&inc_dec_kp &m36_BE &m44_BU &inc_dec_kp PG_UP PG_DN>;
