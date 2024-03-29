@@ -922,6 +922,33 @@
                 , <&macro_tap &kp N>
                 ;
         };
+         m80_GO: m80_GO {
+           label = "m80_GO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp G>
+                , <&macro_tap &kp O>
+                ;
+        };
+         m81_BO: m81_BO {
+           label = "m81_BO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp B>
+                , <&macro_tap &kp O>
+                ;
+        };
+         m82_RO: m82_RO {
+           label = "m82_RO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp R>
+                , <&macro_tap &kp O>
+                ;
+        };
   };
     combos {
         compatible = "zmk,combos";
@@ -934,6 +961,11 @@
             timeout-ms = <50>;
             key-positions = <52 53>;
             bindings = <&m28_AltDel>;
+        };
+        combo_m82 {
+            timeout-ms = <50>;
+            key-positions = <53 54>;
+            bindings = <&m82_RO>;
         };
 //        combo_F12 {
 //            timeout-ms = <50>;
@@ -1038,15 +1070,15 @@
 // | B_1 | B_A | B_S | B_D |  V  |  B  | MUTE |  |      |     |     |     |     |     |     |
 //             |  Y  | B_E | B_U |  I  | B_T  |  | LSHFT|  O  |     |     |     |     
             bindings = <
-&kp ESC   &tog 4  &kp N3  &kp N2  &kp N5  &m47_G6                       &none &none &none &none &none &none
-&kp N2    &kp Q   &kp W   &m49_GE &m45_GU &m46_B6                       &none &none &none &none &none &none
-&kp LSHFT &m39_GA &m40_GS &m41_GD &m42_GF &kp G                         &none &none &none &none &none &none
-&kp LCTRL &m32_BA &m33_BS &m34_BD &m79_GN &m78_BN  &kp C_MUTE &none     &none &none &none &none &none &none
-                  &kp Y   &m36_BE &m44_BU &kp I    &m38_BT    &kp LSHFT &kp O &none &none &none
+&kp ESC   &tog 4  &kp N3   &kp N2  &kp N5  &m47_G6                   &none &none &none &none &none &none
+&kp N2    &kp Q   &kp W    &kp E   &kp R   &m46_B6                   &none &none &none &none &none &none
+&kp LSHFT &m39_GA &m40_GS  &m41_GD &m42_GF &kp G                     &none &none &none &none &none &none
+&kp LCTRL &m32_BA &m33_BS  &m34_BD &m79_GN &m78_BN  &kp C_MUTE &none &none &none &none &none &none &none
+                  &kp LALT &kp Y   &kp U   &m81_BO  &m80_GO    &none &none &none &none &none
             >;            
 // GT средняя кнопка, GR + GE колесо 
 //            sensor-bindings = <&inc_dec_kp &m36_BE &m44_BU &inc_dec_kp PG_UP PG_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp F9 F9>;
+            sensor-bindings = <&inc_dec_kp F9 F9 &inc_dec_kp F9 F9>;
         };
         gui_layer {
 // -------------------------------------------------------------------------------------------------------
