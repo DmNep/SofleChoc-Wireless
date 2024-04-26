@@ -584,7 +584,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp G>
-                , <&macro_tap &kp N7>
+                , <&macro_tap &kp N6>
                 ;
         };
          m48_C_RET: m48_C_RET {
