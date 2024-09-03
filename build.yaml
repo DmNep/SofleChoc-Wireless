@@ -6,7 +6,7 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
-    shield: proXiao_left
-  - board: seeeduino_xiao_ble
-    shield: proXiao_right
+  - board: nice_nano_v2
+    shield: sofle_left
+  - board: nice_nano_v2
+    shield: sofle_right
