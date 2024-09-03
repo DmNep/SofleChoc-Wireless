@@ -9,8 +9,9 @@ include:
 <<<<<<< HEAD
 <<<<<<< HEAD
   - board: nice_nano_v2
-    shield: proXiao_left
+    shield: sofle_left
   - board: nice_nano_v2
+<<<<<<< HEAD
     shield: proXiao_right
 =======
 =======
@@ -23,3 +24,6 @@ include:
 >>>>>>> parent of afc949e (Замена ProXiao на 52840)
 =======
 >>>>>>> parent of afc949e (Замена ProXiao на 52840)
+=======
+    shield: sofle_right
+>>>>>>> parent of e441454 (Оптимизация)
