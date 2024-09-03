@@ -7,13 +7,19 @@
 ---
 include:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - board: nice_nano_v2
     shield: proXiao_left
   - board: nice_nano_v2
     shield: proXiao_right
 =======
+=======
+>>>>>>> parent of afc949e (Замена ProXiao на 52840)
   - board: seeeduino_xiao_ble
     shield: proXiao_left
   - board: seeeduino_xiao_ble
     shield: proXiao_right
+<<<<<<< HEAD
+>>>>>>> parent of afc949e (Замена ProXiao на 52840)
+=======
 >>>>>>> parent of afc949e (Замена ProXiao на 52840)
