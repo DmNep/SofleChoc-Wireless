@@ -7,6 +7,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: sofle_left
+    shield: proXiao_left
   - board: nice_nano_v2
-    shield: sofle_right
+    shield: proXiao_right
