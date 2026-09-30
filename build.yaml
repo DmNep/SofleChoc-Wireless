@@ -1,39 +1,8 @@
-# This file generates the GitHub Actions matrix
-# For simple board + shield combinations, add them
-# to the top level board and shield arrays, for more
-# control, add individual board + shield combinations to
-# the `include` property, e.g:
-#
+# GitHub Actions build matrix for the ZMK user-config workflow.
+# This keymap lives on the proXiao shield (Seeed XIAO BLE), left and right halves.
 ---
 include:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - board: nice_nano_v2
-    shield: sofle_left
-  - board: nice_nano_v2
-<<<<<<< HEAD
-<<<<<<< HEAD
-    shield: proXiao_right
-=======
-=======
->>>>>>> parent of afc949e (Замена ProXiao на 52840)
-=======
->>>>>>> parent of afc949e (Замена ProXiao на 52840)
   - board: seeeduino_xiao_ble
     shield: proXiao_left
   - board: seeeduino_xiao_ble
     shield: proXiao_right
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of afc949e (Замена ProXiao на 52840)
-=======
->>>>>>> parent of afc949e (Замена ProXiao на 52840)
-=======
-    shield: sofle_right
->>>>>>> parent of e441454 (Оптимизация)
-=======
-    shield: sofle_right
->>>>>>> parent of e441454 (Оптимизация)
-=======
->>>>>>> parent of afc949e (Замена ProXiao на 52840)
